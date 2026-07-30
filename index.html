@@ -1,0 +1,1718 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Jennifer Pearl 2028 — transparent government, national renewal, stronger communities, and a future built together.">
+<meta name="theme-color" content="#0b1f33">
+<title>Jennifer Pearl 2028</title>
+<style>
+:root{
+  --navy:#0b1f33;--navy2:#17304a;--paper:#f6f2ea;--surface:#fffdf9;
+  --ink:#18202a;--muted:#67717b;--red:#8d3036;--red2:#6f2429;
+  --gold:#a18b64;--line:#d8d3ca;--white:#fff;--radius:7px;
+  --shadow:0 18px 44px rgba(11,31,51,.10);--max:1180px;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Avenir Next","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.shell{width:min(calc(100% - 2.4rem),var(--max));margin:auto}
+.skip{position:fixed;left:12px;top:12px;z-index:3000;transform:translateY(-160%);padding:.75rem 1rem;border-radius:7px;background:white;color:var(--navy)}
+.skip:focus{transform:none}
+h1,h2,h3{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.02em}
+h1{font-size:clamp(3.7rem,9vw,7.6rem);line-height:.92}
+h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05}
+h3{font-size:1.28rem;line-height:1.2}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 .9rem;color:var(--gold);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}
+.lede{max-width:760px;margin-top:1rem;color:var(--muted);font-size:1rem;line-height:1.82}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-width:0;min-height:48px;max-width:100%;padding:.78rem 1rem;border:1px solid transparent;border-radius:7px;white-space:normal;overflow-wrap:anywhere;text-align:center;line-height:1.35;font-size:.78rem;letter-spacing:.04em;transition:.18s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-light{color:var(--navy);background:var(--surface)}
+.btn-ghost{color:white;border-color:rgba(255,255,255,.34);background:transparent}
+.btn-red{color:white;background:var(--red)}
+.btn-red:hover{background:var(--red2)}
+.btn-outline{color:var(--navy);border-color:var(--gold);background:transparent}
+.header{position:sticky;top:0;z-index:1000;color:white;background:rgba(11,31,51,.97);border-bottom:1px solid rgba(255,255,255,.1);box-shadow:0 8px 22px rgba(0,0,0,.15)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.8rem}
+.mark{width:42px;height:42px;display:grid;place-items:center;border-radius:7px;color:var(--navy);background:var(--paper);font:700 .8rem var(--serif)}
+.brand strong{display:block;font:400 1.05rem var(--serif)}
+.brand small{display:block;color:rgba(255,255,255,.6);font-size:.59rem;letter-spacing:.13em;text-transform:uppercase}
+.links{display:flex;gap:.25rem}
+.links a{padding:.6rem .65rem;border-radius:7px;font-size:.74rem}
+.links a:hover{background:rgba(255,255,255,.07)}
+.menu{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:7px;color:white;background:transparent;font-size:1.15rem}
+.mobile{position:fixed;inset:76px 0 auto;z-index:900;display:none;padding:1rem 1.2rem 1.3rem;color:white;background:var(--navy);box-shadow:0 16px 28px rgba(0,0,0,.18)}
+.mobile.open{display:grid;gap:.35rem}
+.mobile a{padding:.72rem .8rem;border-radius:7px}
+.mobile a:hover{background:rgba(255,255,255,.07)}
+.hero{position:relative;overflow:hidden;color:white;background:radial-gradient(circle at 80% 10%,rgba(161,139,100,.2),transparent 26rem),radial-gradient(circle at 10% 10%,rgba(141,48,54,.2),transparent 24rem),linear-gradient(145deg,var(--navy),var(--navy2))}
+.hero-grid{min-height:720px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(2.5rem,6vw,5rem);padding:clamp(72px,9vw,110px) 0}
+.hero h1 span{display:block;margin-bottom:.35rem;color:#d9ccb7;font-size:.42em;letter-spacing:.12em;text-transform:uppercase}
+.hero-copy p.hero-lede{max-width:700px;margin-top:1.6rem;color:rgba(255,255,255,.78);font-size:1.02rem;line-height:1.85}
+.actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:2rem}
+.actions .btn{flex:0 1 220px}
+.note{margin-top:1.2rem;color:rgba(255,255,255,.52);font-size:.72rem}
+.portrait{min-height:520px;display:grid;place-items:center;padding:1.2rem;border:1px solid rgba(255,255,255,.18);border-radius:7px;background:rgba(255,255,255,.035);box-shadow:0 26px 70px rgba(0,0,0,.2)}
+.placeholder{width:100%;min-height:470px;display:grid;place-items:center;padding:2rem;border:1px dashed rgba(255,255,255,.27);border-radius:7px;text-align:center;color:rgba(255,255,255,.65)}
+.placeholder strong{display:block;color:white;font:400 1.7rem var(--serif)}
+.placeholder span{display:block;max-width:270px;margin-top:.65rem;font-size:.76rem}
+.section{padding:clamp(76px,9vw,112px) 0}
+.alt{background:#eae6df}
+.dark{color:white;background:var(--navy)}
+.heading{max-width:800px;margin-bottom:2.5rem}
+.heading h2:after{content:"";display:block;width:72px;height:1px;margin-top:1.15rem;background:var(--gold)}
+.dark .lede{color:rgba(255,255,255,.68)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem)}
+.story,.policy,.update,.join{border:1px solid var(--line);border-radius:7px;background:var(--surface)}
+.story{padding:2rem;box-shadow:var(--shadow)}
+.story p{margin-top:1rem;color:var(--muted)}
+.quote{padding:2rem;border-left:3px solid var(--red);border-radius:0 7px 7px 0;background:#eee8de}
+.quote blockquote{margin:0;color:var(--navy);font:400 clamp(1.45rem,3vw,2.3rem)/1.42 var(--serif)}
+.quote cite{display:block;margin-top:1rem;color:var(--muted);font-style:normal;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+.policy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.policy{min-height:250px;display:flex;flex-direction:column;padding:1.5rem;transition:.18s ease}
+.policy:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.num{color:var(--gold);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase}
+.policy h3{margin-top:.8rem}
+.policy p{margin-top:.8rem;color:var(--muted);font-size:.86rem}
+.policy a{margin-top:auto;padding-top:1.2rem;color:var(--navy);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.record-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.record{min-height:190px;padding:1.3rem;border:1px solid rgba(255,255,255,.15);border-radius:7px;background:rgba(255,255,255,.04)}
+.record .icon{width:38px;height:38px;display:grid;place-items:center;border-radius:7px;color:var(--navy);background:#d9ccb7;font:700 .75rem var(--serif)}
+.record h3{margin-top:1rem;color:white;font-size:1.15rem}
+.record p{margin-top:.65rem;color:rgba(255,255,255,.62);font-size:.8rem}
+.bio{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.photo{min-height:450px;display:grid;place-items:center;padding:2rem;border:1px solid var(--line);border-radius:7px;background:linear-gradient(135deg,#e3ddd3,#f7f3eb);text-align:center}
+.photo strong{display:block;color:var(--navy);font:400 1.55rem var(--serif)}
+.photo span{display:block;max-width:250px;margin-top:.6rem;color:var(--muted);font-size:.78rem}
+.bio-copy p{margin-top:1rem;color:var(--muted)}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.6rem}
+.fact{padding:1rem;border:1px solid var(--line);border-radius:7px;background:var(--surface)}
+.fact strong{display:block;font:400 1.02rem var(--serif);color:var(--navy)}
+.fact span{display:block;margin-top:.35rem;color:var(--muted);font-size:.75rem}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem}
+.principle{padding:1.4rem;border-top:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.025)}
+.principle h3{color:white;font-size:1.12rem}
+.principle p{margin-top:.75rem;color:rgba(255,255,255,.62);font-size:.82rem}
+.updates{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+.feature{min-height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:2rem;border-radius:7px;color:white;background:linear-gradient(180deg,transparent,rgba(11,31,51,.9)),linear-gradient(135deg,#7d8893,#233b52)}
+.feature h3{margin-top:.7rem;font-size:2rem}
+.feature p{margin-top:.8rem;color:rgba(255,255,255,.75)}
+.stack{display:grid;gap:1rem}
+.update{padding:1.35rem}
+.meta{color:var(--gold);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.update h3{margin-top:.55rem;font-size:1.2rem}
+.update p{margin-top:.65rem;color:var(--muted);font-size:.82rem}
+.join{display:grid;grid-template-columns:1fr .8fr;gap:2rem;align-items:center;padding:clamp(2rem,5vw,3.6rem);box-shadow:var(--shadow)}
+.join p{margin-top:1rem;color:var(--muted)}
+.join-actions{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+.form{display:grid;grid-template-columns:1fr auto;gap:.65rem;margin-top:1.2rem}
+.form input{min-width:0;min-height:48px;padding:.75rem .9rem;border:1px solid var(--line);border-radius:7px;background:white}
+.footer{color:rgba(255,255,255,.7);background:#081725}
+.footer-grid{display:grid;grid-template-columns:1.2fr repeat(3,.7fr);gap:2rem;padding:3rem 0 2rem}
+.footer h3{color:white;font-size:1.05rem}
+.footer p{margin-top:.75rem;font-size:.78rem}
+.footer-links{display:grid;gap:.5rem;margin-top:.8rem;font-size:.77rem}
+.bottom{display:flex;justify-content:space-between;gap:1rem;padding:1.15rem 0 1.5rem;border-top:1px solid rgba(255,255,255,.1);font-size:.7rem}
+@media(max-width:1000px){
+  .links{display:none}.menu{display:grid;place-items:center}
+  .hero-grid,.bio,.join{grid-template-columns:1fr}
+  .policy-grid{grid-template-columns:repeat(2,1fr)}
+  .record-grid,.principles{grid-template-columns:repeat(2,1fr)}
+  .updates{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .shell{width:min(calc(100% - 1.4rem),var(--max))}
+  .brand small{display:none}
+  .hero-grid{min-height:auto;padding:64px 0 76px}
+  .actions{display:grid}.actions .btn{width:100%}
+  .two,.policy-grid,.record-grid,.principles,.facts,.footer-grid{grid-template-columns:1fr}
+  .join-actions,.form{grid-template-columns:1fr}
+  .bottom{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ==========================================================
+   CENTERED CAMPAIGN COMPOSITION
+   ========================================================== */
+body{
+  text-align:center;
+}
+
+.heading,
+.lede,
+.hero-copy,
+.bio-copy{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.heading h2::after{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.eyebrow{
+  justify-content:center;
+}
+
+.hero-grid,
+.two,
+.bio,
+.join{
+  text-align:center;
+}
+
+.hero-lede,
+.story p,
+.policy p,
+.record p,
+.bio-copy p,
+.principle p,
+.update p,
+.feature p,
+.join p{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.actions{
+  justify-content:center;
+}
+
+.story,
+.quote,
+.policy,
+.record,
+.fact,
+.principle,
+.update,
+.feature,
+.join,
+.footer-grid > div{
+  text-align:center;
+}
+
+.policy a{
+  align-self:center;
+}
+
+.record .icon{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.bio-facts,
+.join-actions{
+  justify-content:center;
+}
+
+.footer-links{
+  justify-items:center;
+}
+
+.bottom{
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ==========================================================
+   PUBLIC CIVIC GATEWAYS
+   ========================================================== */
+.gateway-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+}
+
+.gateway-card{
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:1.65rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--surface);
+  box-shadow:0 10px 24px rgba(11,31,51,.055);
+}
+
+.gateway-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  border-radius:7px;
+  color:white;
+  background:var(--navy);
+  font:400 1rem var(--serif);
+}
+
+.gateway-card h3{
+  margin-top:1rem;
+}
+
+.gateway-card p{
+  max-width:330px;
+  margin:.8rem auto 1.3rem;
+  color:var(--muted);
+  font-size:.86rem;
+}
+
+.gateway-card .btn{
+  width:100%;
+  margin-top:auto;
+}
+
+
+/* ==========================================================
+   CAMPAIGN SLIDE GALLERY + PRIVATE ADMIN
+   ========================================================== */
+.gallery-shell{
+  max-width:980px;
+  margin:0 auto;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+
+.gallery-stage{
+  position:relative;
+  min-height:520px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  border-radius:7px;
+  background:linear-gradient(135deg,#dcd7ce,#f6f2ea);
+}
+
+.gallery-stage img{
+  width:100%;
+  height:520px;
+  object-fit:contain;
+  background:#e9e4dc;
+}
+
+.gallery-empty{
+  max-width:520px;
+  padding:2rem;
+  color:var(--muted);
+}
+
+.gallery-empty strong{
+  display:block;
+  color:var(--navy);
+  font:400 1.6rem var(--serif);
+}
+
+.gallery-empty span{
+  display:block;
+  margin-top:.7rem;
+  font-size:.82rem;
+}
+
+.gallery-caption{
+  position:absolute;
+  left:1rem;
+  right:1rem;
+  bottom:1rem;
+  padding:.8rem 1rem;
+  border-radius:7px;
+  color:white;
+  background:rgba(11,31,51,.86);
+  font-size:.8rem;
+  backdrop-filter:blur(8px);
+}
+
+.gallery-controls{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin-top:1rem;
+}
+
+.gallery-controls .btn{
+  flex:0 1 180px;
+}
+
+.gallery-status{
+  margin-top:.8rem;
+  color:var(--muted);
+  font-size:.76rem;
+}
+
+.gallery-thumbs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(90px,1fr));
+  gap:.65rem;
+  margin-top:1rem;
+}
+
+.gallery-thumb{
+  min-height:86px;
+  padding:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:#eee8de;
+}
+
+.gallery-thumb[aria-current="true"]{
+  border-color:var(--navy);
+  box-shadow:0 0 0 2px rgba(11,31,51,.15);
+}
+
+.gallery-thumb img{
+  width:100%;
+  height:86px;
+  object-fit:cover;
+}
+
+.upload-label{
+  position:relative;
+  overflow:hidden;
+}
+
+.upload-label input{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  cursor:pointer;
+}
+
+.admin-modal[hidden]{
+  display:none;
+}
+
+.admin-modal{
+  position:fixed;
+  inset:0;
+  z-index:3000;
+  display:grid;
+  place-items:center;
+  padding:1rem;
+}
+
+.admin-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(5,14,23,.82);
+  backdrop-filter:blur(8px);
+}
+
+.admin-dialog{
+  position:relative;
+  z-index:1;
+  width:min(920px,100%);
+  max-height:92vh;
+  overflow:auto;
+  padding:clamp(1.4rem,4vw,2.5rem);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:7px;
+  color:var(--ink);
+  background:var(--paper);
+  box-shadow:0 28px 80px rgba(0,0,0,.42);
+  text-align:center;
+}
+
+.admin-close{
+  position:absolute;
+  top:.75rem;
+  right:.75rem;
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  border-radius:7px;
+  color:var(--navy);
+  background:var(--surface);
+  font-size:1.35rem;
+}
+
+.admin-copy{
+  max-width:690px;
+  margin:1rem auto 0;
+  color:var(--muted);
+}
+
+.admin-form{
+  max-width:460px;
+  display:grid;
+  gap:.7rem;
+  margin:1.5rem auto 0;
+  text-align:left;
+}
+
+.admin-form label{
+  color:var(--navy);
+  font-size:.75rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.admin-form input,
+.admin-item input{
+  width:100%;
+  min-height:48px;
+  padding:.75rem .9rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  color:var(--ink);
+  background:white;
+}
+
+.admin-note,
+.admin-message{
+  margin-top:1rem;
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+.admin-message.error{
+  color:#8d3036;
+}
+
+.admin-message.success{
+  color:#24634f;
+}
+
+.admin-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.6rem;
+  margin-top:1.5rem;
+}
+
+.admin-toolbar .btn{
+  flex:0 1 210px;
+}
+
+.admin-list{
+  display:grid;
+  gap:.85rem;
+  margin-top:1.5rem;
+}
+
+.admin-item{
+  display:grid;
+  grid-template-columns:120px minmax(0,1fr) auto;
+  gap:1rem;
+  align-items:center;
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--surface);
+  text-align:left;
+}
+
+.admin-item img{
+  width:120px;
+  height:90px;
+  object-fit:cover;
+  border-radius:7px;
+  background:#e9e4dc;
+}
+
+.admin-item-fields{
+  display:grid;
+  gap:.6rem;
+}
+
+.admin-item-actions{
+  display:grid;
+  gap:.45rem;
+  min-width:130px;
+}
+
+.admin-item-actions .btn{
+  min-height:40px;
+  padding:.55rem .7rem;
+}
+
+@media(max-width:900px){
+  .gateway-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:700px){
+  .admin-item{grid-template-columns:1fr;text-align:center}
+  .admin-item img{width:100%;height:180px}
+  .admin-item-actions{grid-template-columns:1fr 1fr}
+  .gallery-stage{
+    min-height:340px;
+  }
+
+  .gallery-stage img{
+    height:340px;
+  }
+
+  .gallery-controls{
+    display:grid;
+  }
+
+  .gallery-controls .btn{
+    width:100%;
+  }
+}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="header">
+  <div class="shell nav">
+    <a class="brand" href="#top">
+      <span class="mark">JP</span>
+      <span><strong>Jennifer Pearl 2028</strong><small>A future built together</small></span>
+    </a>
+    <nav class="links" aria-label="Primary navigation">
+      <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
+      <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
+      <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join</a><a href="#gallery" id="headerAdminLink">Admin</a>
+    </nav>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="mobile" aria-label="Open navigation">☰</button>
+  </div>
+</header>
+
+<nav class="mobile" id="mobile" aria-label="Mobile navigation">
+  <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
+  <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
+  <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join the Movement</a>
+</nav>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Candidate for President of the United States</p>
+      <h1><span>Jennifer Pearl</span>2028</h1>
+      <p class="hero-lede">A government that listens. A nation that restores. A future built together through transparent leadership, practical solutions, stronger communities, and renewed public trust.</p>
+      <div class="actions">
+        <a class="btn btn-light" href="#about">Meet Jennifer</a>
+        <a class="btn btn-ghost" href="#priorities">Explore the Vision</a>
+        <a class="btn btn-ghost" href="#join">Join the Movement</a>
+      </div>
+      <p class="note">First-draft campaign landing page with editable image and policy placeholders.</p>
+    </div>
+    <div class="portrait">
+      <div class="placeholder"><div><strong>Your Campaign Portrait</strong><span>Reserved for a formal photograph with generous breathing room and a dignified composition.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="vision">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">Why I am running</p>
+      <h2>Renewing trust by putting people back at the center of government.</h2>
+      <p class="lede">Public service should be understandable, accountable, compassionate, and useful in the daily lives of the people it serves.</p>
+    </div>
+    <div class="two">
+      <article class="story">
+        <h3>A practical movement for national renewal</h3>
+        <p>America does not need more noise. It needs steady leadership, honest information, responsible stewardship, and solutions that reach families, workers, seniors, veterans, students, small businesses, and communities too often left unheard.</p>
+        <p>Jennifer Pearl 2028 is a campaign for transparent government, affordable living, environmental restoration, ethical technology, accessible education, healthier communities, and a nation capable of solving problems together.</p>
+      </article>
+      <aside class="quote">
+        <blockquote>“Leadership is not a performance. It is the patient work of listening, building, repairing, and making sure every person can understand the government that serves them.”</blockquote>
+        <cite>Jennifer Kay Pearl</cite>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="priorities">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">The American Renewal Plan</p>
+      <h2>Clear priorities. Public accountability. Measurable progress.</h2>
+      <p class="lede">Each priority can grow into a plain-language policy brief with goals, timelines, funding pathways, public dashboards, and opportunities for citizen participation.</p>
+    </div>
+    <div class="policy-grid">
+      <article class="policy"><span class="num">Priority 01</span><h3>Government Transparency</h3><p>Plain-language agencies, open public data, stronger ethics rules, accessible records, and meaningful accountability.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 02</span><h3>Economic Security</h3><p>A stronger foundation for working families, small businesses, responsible entrepreneurship, fair markets, and household stability.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 03</span><h3>Health and Family Stability</h3><p>Understandable health systems, prevention, affordable care, family support, senior assistance, and reliable medicine access.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 04</span><h3>Environmental Renewal</h3><p>Clean water, resilient communities, restored public lands, healthier neighborhoods, and practical local action.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 05</span><h3>Housing and Property Protection</h3><p>Respect for primary residences, stronger affordability, improved insurance stability, and protection from displacement.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 06</span><h3>Education and Opportunity</h3><p>Free learning resources, civic education, workforce preparation, arts and humanities, and lifelong learning.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 07</span><h3>Veterans and Community Care</h3><p>Better coordination for veterans, homelessness prevention, mental health, local services, and no-wrong-door support.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 08</span><h3>Ethical Technology</h3><p>Human-centered technology, public-interest AI, privacy, accessibility, digital literacy, and safeguards against abuse.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 09</span><h3>Rights and National Unity</h3><p>Protecting liberty, encouraging civic participation, rebuilding trust, and creating space to solve difficult problems together.</p><a href="#join">Developing brief →</a></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="public-resources">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">Read, learn, and participate</p>
+      <h2>Editorial, voter, and civic information.</h2>
+      <p class="lede">
+        Follow the campaign into the wider public network for long-form
+        editorial writing, voter education, and nonpartisan civic resources.
+      </p>
+    </div>
+
+    <div class="gateway-grid">
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">E</span>
+        <h3>Jennifer Pearl Editorials</h3>
+        <p>
+          Read Jennifer's published commentary, public reflections, and
+          long-form editorial work inside The Verifier.
+        </p>
+        <a
+          class="btn btn-outline"
+          href="https://vervenveda.github.io/theverifier.github.io/#columns"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open the Editorial Desk
+        </a>
+      </article>
+
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">V</span>
+        <h3>Voter Hub</h3>
+        <p>
+          Find voter education, participation guidance, election-learning
+          portals, and pathways into the One Nation For All civic network.
+        </p>
+        <a
+          class="btn btn-outline"
+          href="https://vervenveda.github.io/onenationforall.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit the Voter Hub
+        </a>
+      </article>
+
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">C</span>
+        <h3>Civic Information</h3>
+        <p>
+          Explore plain-language government, constitutional learning, public
+          policy, civic participation, and community resources.
+        </p>
+        <a
+          class="btn btn-outline"
+          href="https://vervenveda.github.io/onenationforall.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Civic Information
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="record">
+  <div class="shell">
+    <div class="heading"><p class="eyebrow">A record of building</p><h2>Public-service work already underway.</h2><p class="lede">The campaign is grounded in an expanding network of free public resources, educational spaces, civic tools, environmental projects, and community-centered platforms.</p></div>
+    <div class="record-grid">
+      <article class="record"><span class="icon">V</span><h3>Verve N Veda</h3><p>A public gateway connecting education, research, culture, community resources, and civic tools.</p></article>
+      <article class="record"><span class="icon">1</span><h3>One Nation For All</h3><p>Civic dialogue, policy learning, public participation, and solutions grounded in dignity and unity.</p></article>
+      <article class="record"><span class="icon">KA</span><h3>Archaemenes Academy</h3><p>A free educational vision supporting learners, families, educators, and lifelong curiosity.</p></article>
+      <article class="record"><span class="icon">R</span><h3>River to Road</h3><p>Community environmental action focused on neighborhood cleanup, stewardship, and restoration.</p></article>
+      <article class="record"><span class="icon">F</span><h3>Firmament Law</h3><p>Public legal education, rights resources, practical guides, and understandable civic information.</p></article>
+      <article class="record"><span class="icon">M</span><h3>Medicament Hub</h3><p>Whole-person health education, family support, medical resources, and accessible public guidance.</p></article>
+      <article class="record"><span class="icon">V</span><h3>The Verifier</h3><p>Independent news discovery, source comparison, research tools, education, and public-interest information.</p></article>
+      <article class="record"><span class="icon">⌕</span><h3>PLERA Search</h3><p>A sovereign gateway into trusted resources, public directories, and connected knowledge.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="shell bio">
+    <div class="photo"><div><strong>Community Photo Area</strong><span>Use this space for a family, environmental, community, or behind-the-scenes photograph.</span></div></div>
+    <div class="bio-copy">
+      <p class="eyebrow">Meet Jennifer</p>
+      <h2>Artist. Entrepreneur. Builder. Mother. Citizen.</h2>
+      <p>Jennifer Kay Pearl is an artist, entrepreneur, educator, nonprofit founder, environmental advocate, and creator of public digital resources designed to make knowledge and opportunity more accessible.</p>
+      <p>Her work grows from a belief that people should not have to navigate public life alone. Through education, legal resources, health information, environmental service, creative platforms, and civic tools, she has worked to build practical pathways that help people understand their choices and participate in their communities.</p>
+      <div class="facts">
+        <div class="fact"><strong>Community builder</strong><span>Free public resources and connected learning spaces</span></div>
+        <div class="fact"><strong>Environmental advocate</strong><span>Neighborhood restoration and River to Road service</span></div>
+        <div class="fact"><strong>Artist and entrepreneur</strong><span>Creative enterprise, education, and cultural access</span></div>
+        <div class="fact"><strong>Independent problem-solver</strong><span>Plain-language, practical, people-centered solutions</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="shell">
+    <div class="heading"><p class="eyebrow">A government people can understand</p><h2>Public information should belong to the public.</h2><p class="lede">This campaign supports a new standard for accessible, accountable, and understandable government.</p></div>
+    <div class="principles">
+      <article class="principle"><h3>Plain-language government</h3><p>Laws, budgets, agencies, and programs should be written so ordinary people can understand them.</p></article>
+      <article class="principle"><h3>Open public records</h3><p>Records, contracts, expenditures, and progress reports should be easier to find and compare.</p></article>
+      <article class="principle"><h3>Measurable commitments</h3><p>Policy promises should include goals, timelines, responsible agencies, and public reporting.</p></article>
+      <article class="principle"><h3>Citizen participation</h3><p>People should have accessible ways to contribute ideas, submit concerns, and follow decisions.</p></article>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="gallery">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">Campaign gallery</p>
+      <h2>People, places, service, and the road to 2028.</h2>
+      <p class="lede">
+        A quiet campaign slideshow curated through the private gallery
+        administrator.
+      </p>
+    </div>
+
+    <div class="gallery-shell">
+      <div class="gallery-stage" id="galleryStage" aria-live="polite">
+        <div class="gallery-empty" id="galleryEmpty">
+          <strong>The campaign gallery is ready.</strong>
+          <span>
+            Use the private Admin button to add the first campaign photograph.
+          </span>
+        </div>
+
+        <img id="galleryImage" alt="" hidden>
+        <div class="gallery-caption" id="galleryCaption" hidden></div>
+      </div>
+
+      <div class="gallery-controls">
+        <button class="btn btn-outline" id="galleryPrevious" type="button">
+          Previous
+        </button>
+
+        <button class="btn btn-outline" id="galleryPlay" type="button">
+          Start Slideshow
+        </button>
+
+        <button class="btn btn-outline" id="galleryNext" type="button">
+          Next
+        </button>
+
+        <button class="btn btn-red" id="galleryAdminOpen" type="button">
+          Gallery Admin
+        </button>
+      </div>
+
+      <p class="gallery-status" id="galleryStatus">
+        No campaign images have been published in this browser.
+      </p>
+
+      <div
+        class="gallery-thumbs"
+        id="galleryThumbs"
+        aria-label="Gallery thumbnails"
+      ></div>
+    </div>
+  </div>
+</section>
+
+<div
+  class="admin-modal"
+  id="galleryAdminModal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="galleryAdminTitle"
+  hidden
+>
+  <div class="admin-backdrop" data-admin-close></div>
+
+  <div class="admin-dialog">
+    <button
+      class="admin-close"
+      id="galleryAdminClose"
+      type="button"
+      aria-label="Close gallery administration"
+    >
+      ×
+    </button>
+
+    <div id="galleryLoginView">
+      <p class="eyebrow">Private administration</p>
+      <h2 id="galleryAdminTitle">Campaign Gallery Admin</h2>
+      <p class="admin-copy">
+        Enter the gallery security code to add, edit, reorder, or remove
+        campaign images.
+      </p>
+
+      <form class="admin-form" id="galleryLoginForm">
+        <label for="galleryPin">Security code</label>
+        <input
+          id="galleryPin"
+          name="pin"
+          type="password"
+          inputmode="numeric"
+          autocomplete="current-password"
+          maxlength="32"
+          required
+        >
+        <button class="btn btn-red" type="submit">Unlock Gallery</button>
+      </form>
+
+      <p class="admin-note">
+        Initial code: <strong>00000</strong>. Change it after the first login.
+      </p>
+      <p class="admin-message" id="galleryLoginMessage" aria-live="polite"></p>
+    </div>
+
+    <div id="galleryManagerView" hidden>
+      <p class="eyebrow">Gallery unlocked</p>
+      <h2>Manage Campaign Images</h2>
+      <p class="admin-copy">
+        Images are stored persistently in this browser using IndexedDB.
+        Add a caption before publishing each photograph.
+      </p>
+
+      <div class="admin-toolbar">
+        <label class="btn btn-red upload-label">
+          Add Images
+          <input
+            id="galleryAdminUpload"
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/gif"
+            multiple
+          >
+        </label>
+
+        <button class="btn btn-outline" id="galleryExport" type="button">
+          Export Gallery Backup
+        </button>
+
+        <label class="btn btn-outline upload-label">
+          Import Gallery Backup
+          <input
+            id="galleryImport"
+            type="file"
+            accept="application/json"
+          >
+        </label>
+
+        <button class="btn btn-outline" id="galleryChangePin" type="button">
+          Change Security Code
+        </button>
+
+        <button class="btn btn-outline" id="galleryLock" type="button">
+          Lock Admin
+        </button>
+      </div>
+
+      <p class="admin-message" id="galleryAdminMessage" aria-live="polite"></p>
+
+      <div class="admin-list" id="galleryAdminList"></div>
+    </div>
+  </div>
+</div>
+
+<section class="section alt" id="updates">
+  <div class="shell">
+    <div class="heading"><p class="eyebrow">Campaign journal</p><h2>News, policy releases, community visits, and reflections.</h2><p class="lede">First-draft placeholders for future campaign updates.</p></div>
+    <div class="updates">
+      <article class="feature"><span class="meta">Featured update</span><h3>Why national renewal begins in our neighborhoods</h3><p>A reflection on environmental service, community responsibility, and how local action can shape a larger national vision.</p></article>
+      <div class="stack">
+        <article class="update"><span class="meta">Policy release</span><h3>A plain-language government standard</h3><p>A framework for making public agencies, programs, budgets, and records easier to understand.</p></article>
+        <article class="update"><span class="meta">Campaign reflection</span><h3>Leadership without performance</h3><p>Thoughts on listening, humility, responsibility, and the steady work required to rebuild public trust.</p></article>
+        <article class="update"><span class="meta">Community work</span><h3>River to Road: service before slogans</h3><p>A community cleanup and restoration update focused on visible environmental stewardship.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="join">
+  <div class="shell">
+    <div class="join">
+      <div>
+        <p class="eyebrow">Join the movement</p>
+        <h2>Help build a campaign rooted in service, dignity, and renewal.</h2>
+        <p>Volunteer, share your ideas, attend an event, support local service projects, or receive campaign updates as the national platform grows.</p>
+        <form class="form" id="form">
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+          <button class="btn btn-red" type="submit">Receive Updates</button>
+        </form>
+      </div>
+      <div class="join-actions">
+        <a class="btn btn-red" href="#">Volunteer</a>
+        <a class="btn btn-outline" href="#">Attend an Event</a>
+        <a class="btn btn-outline" href="#">Share the Campaign</a>
+        <a class="btn btn-outline" href="#">Support the Mission</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="shell footer-grid">
+    <div><h3>Jennifer Pearl 2028</h3><p>A campaign for transparent government, national renewal, practical solutions, stronger communities, and a future built together.</p></div>
+    <div><h3>Campaign</h3><div class="footer-links"><a href="#about">Meet Jennifer</a><a href="#priorities">Policy Priorities</a><a href="#gallery">Campaign Gallery</a><a href="#updates">News and Updates</a><a href="#join">Volunteer</a></div></div>
+    <div><h3>Public Network</h3><div class="footer-links"><a href="#">One Nation For All</a><a href="#">Verve N Veda</a><a href="#">PLERA Search</a><a href="#">The Verifier</a></div></div>
+    <div><h3>Information</h3><div class="footer-links"><a href="#">Accessibility</a><a href="#">Privacy</a><a href="#">Contact</a><a href="#">Campaign Disclosures</a></div></div>
+  </div>
+  <div class="shell bottom"><span>© 2028 Jennifer Pearl 2028. All rights reserved.</span><span>Paid for by Jennifer Pearl 2028.</span></div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  const menu=document.getElementById("menu");
+  const mobile=document.getElementById("mobile");
+  const form=document.getElementById("form");
+
+  function closeMenu(){
+    mobile.classList.remove("open");
+    menu.setAttribute("aria-expanded","false");
+    menu.setAttribute("aria-label","Open navigation");
+    menu.textContent="☰";
+  }
+
+  menu.addEventListener("click",function(){
+    const open=mobile.classList.toggle("open");
+    menu.setAttribute("aria-expanded",String(open));
+    menu.setAttribute("aria-label",open?"Close navigation":"Open navigation");
+    menu.textContent=open?"×":"☰";
+  });
+
+  mobile.querySelectorAll("a").forEach(function(link){
+    link.addEventListener("click",closeMenu);
+  });
+
+  document.addEventListener("keydown",function(event){
+    if(event.key==="Escape")closeMenu();
+  });
+
+
+
+  const galleryImage=document.getElementById("galleryImage");
+  const galleryEmpty=document.getElementById("galleryEmpty");
+  const galleryCaption=document.getElementById("galleryCaption");
+  const galleryStatus=document.getElementById("galleryStatus");
+  const galleryThumbs=document.getElementById("galleryThumbs");
+  const galleryPrevious=document.getElementById("galleryPrevious");
+  const galleryNext=document.getElementById("galleryNext");
+  const galleryPlay=document.getElementById("galleryPlay");
+  const galleryAdminOpen=document.getElementById("galleryAdminOpen");
+  const galleryAdminModal=document.getElementById("galleryAdminModal");
+  const galleryAdminClose=document.getElementById("galleryAdminClose");
+  const galleryLoginView=document.getElementById("galleryLoginView");
+  const galleryManagerView=document.getElementById("galleryManagerView");
+  const galleryLoginForm=document.getElementById("galleryLoginForm");
+  const galleryPin=document.getElementById("galleryPin");
+  const galleryLoginMessage=document.getElementById("galleryLoginMessage");
+  const galleryAdminUpload=document.getElementById("galleryAdminUpload");
+  const galleryAdminList=document.getElementById("galleryAdminList");
+  const galleryAdminMessage=document.getElementById("galleryAdminMessage");
+  const galleryExport=document.getElementById("galleryExport");
+  const galleryImport=document.getElementById("galleryImport");
+  const galleryChangePin=document.getElementById("galleryChangePin");
+  const galleryLock=document.getElementById("galleryLock");
+
+  const GALLERY_DB_NAME="jennifer_pearl_2028_gallery";
+  const GALLERY_DB_VERSION=1;
+  const GALLERY_STORE="images";
+  const GALLERY_PIN_KEY="jp2028_gallery_pin_hash_v1";
+  const GALLERY_DEFAULT_PIN="00000";
+
+  let galleryItems=[];
+  let galleryIndex=0;
+  let galleryTimer=null;
+  let galleryUnlocked=false;
+  let galleryDbPromise=null;
+  let galleryObjectUrls=[];
+
+  function setAdminMessage(element,message,type){
+    element.textContent=message || "";
+    element.className="admin-message" + (type ? " " + type : "");
+  }
+
+  async function hashPin(value){
+    const data=new TextEncoder().encode(String(value));
+    const digest=await crypto.subtle.digest("SHA-256",data);
+    return Array.from(new Uint8Array(digest))
+      .map(function(byte){return byte.toString(16).padStart(2,"0");})
+      .join("");
+  }
+
+  async function ensurePin(){
+    let saved=localStorage.getItem(GALLERY_PIN_KEY);
+    if(!saved){
+      saved=await hashPin(GALLERY_DEFAULT_PIN);
+      localStorage.setItem(GALLERY_PIN_KEY,saved);
+    }
+    return saved;
+  }
+
+  function openGalleryDb(){
+    if(galleryDbPromise)return galleryDbPromise;
+
+    galleryDbPromise=new Promise(function(resolve,reject){
+      const request=indexedDB.open(GALLERY_DB_NAME,GALLERY_DB_VERSION);
+
+      request.onupgradeneeded=function(){
+        const db=request.result;
+        if(!db.objectStoreNames.contains(GALLERY_STORE)){
+          const store=db.createObjectStore(GALLERY_STORE,{
+            keyPath:"id",
+            autoIncrement:true
+          });
+          store.createIndex("order","order",{unique:false});
+        }
+      };
+
+      request.onsuccess=function(){resolve(request.result);};
+      request.onerror=function(){reject(request.error);};
+    });
+
+    return galleryDbPromise;
+  }
+
+  async function galleryDbGetAll(){
+    const db=await openGalleryDb();
+
+    return new Promise(function(resolve,reject){
+      const tx=db.transaction(GALLERY_STORE,"readonly");
+      const request=tx.objectStore(GALLERY_STORE).getAll();
+
+      request.onsuccess=function(){
+        const items=(request.result || []).sort(function(a,b){
+          return (a.order || 0)-(b.order || 0);
+        });
+        resolve(items);
+      };
+
+      request.onerror=function(){reject(request.error);};
+    });
+  }
+
+  async function galleryDbPut(item){
+    const db=await openGalleryDb();
+
+    return new Promise(function(resolve,reject){
+      const tx=db.transaction(GALLERY_STORE,"readwrite");
+      const request=tx.objectStore(GALLERY_STORE).put(item);
+      request.onsuccess=function(){resolve(request.result);};
+      request.onerror=function(){reject(request.error);};
+    });
+  }
+
+  async function galleryDbDelete(id){
+    const db=await openGalleryDb();
+
+    return new Promise(function(resolve,reject){
+      const tx=db.transaction(GALLERY_STORE,"readwrite");
+      const request=tx.objectStore(GALLERY_STORE).delete(id);
+      request.onsuccess=function(){resolve();};
+      request.onerror=function(){reject(request.error);};
+    });
+  }
+
+  async function galleryDbClear(){
+    const db=await openGalleryDb();
+
+    return new Promise(function(resolve,reject){
+      const tx=db.transaction(GALLERY_STORE,"readwrite");
+      const request=tx.objectStore(GALLERY_STORE).clear();
+      request.onsuccess=function(){resolve();};
+      request.onerror=function(){reject(request.error);};
+    });
+  }
+
+  function releaseGalleryUrls(){
+    galleryObjectUrls.forEach(function(url){
+      URL.revokeObjectURL(url);
+    });
+    galleryObjectUrls=[];
+  }
+
+  async function refreshGallery(){
+    releaseGalleryUrls();
+
+    const stored=await galleryDbGetAll();
+    galleryItems=stored.map(function(item){
+      const url=URL.createObjectURL(item.blob);
+      galleryObjectUrls.push(url);
+
+      return {
+        id:item.id,
+        name:item.name || "Campaign photograph",
+        caption:item.caption || "",
+        order:item.order || 0,
+        blob:item.blob,
+        url:url
+      };
+    });
+
+    if(galleryIndex>=galleryItems.length){
+      galleryIndex=Math.max(0,galleryItems.length-1);
+    }
+
+    renderGalleryThumbs();
+    showGallery(galleryIndex);
+
+    if(galleryUnlocked){
+      renderGalleryAdminList();
+    }
+  }
+
+  function stopGallery(){
+    if(galleryTimer){
+      window.clearInterval(galleryTimer);
+      galleryTimer=null;
+    }
+
+    galleryPlay.textContent="Start Slideshow";
+    galleryPlay.setAttribute("aria-pressed","false");
+  }
+
+  function showGallery(index){
+    if(!galleryItems.length){
+      galleryImage.hidden=true;
+      galleryCaption.hidden=true;
+      galleryEmpty.hidden=false;
+      galleryStatus.textContent="No campaign images have been published in this browser.";
+      galleryThumbs.innerHTML="";
+      stopGallery();
+      return;
+    }
+
+    galleryIndex=(index+galleryItems.length)%galleryItems.length;
+    const item=galleryItems[galleryIndex];
+
+    galleryEmpty.hidden=true;
+    galleryImage.hidden=false;
+    galleryImage.src=item.url;
+    galleryImage.alt=item.caption || item.name;
+    galleryCaption.textContent=item.caption || item.name;
+    galleryCaption.hidden=false;
+    galleryStatus.textContent=
+      "Slide " + (galleryIndex+1) + " of " + galleryItems.length;
+
+    galleryThumbs.querySelectorAll(".gallery-thumb").forEach(function(button,position){
+      button.setAttribute(
+        "aria-current",
+        position===galleryIndex ? "true" : "false"
+      );
+    });
+  }
+
+  function renderGalleryThumbs(){
+    galleryThumbs.innerHTML="";
+
+    galleryItems.forEach(function(item,index){
+      const button=document.createElement("button");
+      button.type="button";
+      button.className="gallery-thumb";
+      button.setAttribute(
+        "aria-label",
+        "Show " + (item.caption || item.name)
+      );
+      button.setAttribute(
+        "aria-current",
+        index===galleryIndex ? "true" : "false"
+      );
+
+      const image=document.createElement("img");
+      image.src=item.url;
+      image.alt="";
+
+      button.appendChild(image);
+      button.addEventListener("click",function(){
+        stopGallery();
+        showGallery(index);
+      });
+
+      galleryThumbs.appendChild(button);
+    });
+  }
+
+  function openAdminModal(){
+    galleryAdminModal.hidden=false;
+    document.body.style.overflow="hidden";
+
+    if(galleryUnlocked){
+      galleryLoginView.hidden=true;
+      galleryManagerView.hidden=false;
+      renderGalleryAdminList();
+    }else{
+      galleryLoginView.hidden=false;
+      galleryManagerView.hidden=true;
+      galleryPin.value="";
+      setAdminMessage(galleryLoginMessage,"","");
+      window.setTimeout(function(){galleryPin.focus();},50);
+    }
+  }
+
+  function closeAdminModal(){
+    galleryAdminModal.hidden=true;
+    document.body.style.overflow="";
+    galleryPin.value="";
+  }
+
+  function lockGalleryAdmin(){
+    galleryUnlocked=false;
+    galleryLoginView.hidden=false;
+    galleryManagerView.hidden=true;
+    closeAdminModal();
+  }
+
+
+  const headerAdminLink=document.getElementById("headerAdminLink");
+  if(headerAdminLink){
+    headerAdminLink.addEventListener("click",function(event){
+      event.preventDefault();
+      openAdminModal();
+    });
+  }
+
+  galleryAdminOpen.addEventListener("click",openAdminModal);
+  galleryAdminClose.addEventListener("click",closeAdminModal);
+
+  galleryAdminModal.querySelectorAll("[data-admin-close]").forEach(function(item){
+    item.addEventListener("click",closeAdminModal);
+  });
+
+  galleryLoginForm.addEventListener("submit",async function(event){
+    event.preventDefault();
+
+    try{
+      const saved=await ensurePin();
+      const entered=await hashPin(galleryPin.value);
+
+      if(entered!==saved){
+        setAdminMessage(
+          galleryLoginMessage,
+          "The security code is incorrect.",
+          "error"
+        );
+        galleryPin.select();
+        return;
+      }
+
+      galleryUnlocked=true;
+      galleryLoginView.hidden=true;
+      galleryManagerView.hidden=false;
+      setAdminMessage(galleryLoginMessage,"","");
+      setAdminMessage(
+        galleryAdminMessage,
+        "Gallery unlocked.",
+        "success"
+      );
+      await refreshGallery();
+    }catch(error){
+      console.error(error);
+      setAdminMessage(
+        galleryLoginMessage,
+        "The gallery could not be unlocked in this browser.",
+        "error"
+      );
+    }
+  });
+
+  galleryLock.addEventListener("click",lockGalleryAdmin);
+
+  galleryChangePin.addEventListener("click",async function(){
+    if(!galleryUnlocked)return;
+
+    const current=window.prompt("Enter the current security code:");
+    if(current===null)return;
+
+    const saved=await ensurePin();
+    const currentHash=await hashPin(current);
+
+    if(currentHash!==saved){
+      setAdminMessage(
+        galleryAdminMessage,
+        "The current security code was not correct.",
+        "error"
+      );
+      return;
+    }
+
+    const next=window.prompt(
+      "Enter a new security code. Use at least five characters:"
+    );
+
+    if(next===null)return;
+
+    if(next.length<5){
+      setAdminMessage(
+        galleryAdminMessage,
+        "The new security code must contain at least five characters.",
+        "error"
+      );
+      return;
+    }
+
+    const confirmNext=window.prompt("Enter the new security code again:");
+
+    if(confirmNext!==next){
+      setAdminMessage(
+        galleryAdminMessage,
+        "The two new security codes did not match.",
+        "error"
+      );
+      return;
+    }
+
+    localStorage.setItem(GALLERY_PIN_KEY,await hashPin(next));
+    setAdminMessage(
+      galleryAdminMessage,
+      "The gallery security code has been changed.",
+      "success"
+    );
+  });
+
+  galleryAdminUpload.addEventListener("change",async function(){
+    if(!galleryUnlocked)return;
+
+    const files=Array.from(galleryAdminUpload.files || []).filter(function(file){
+      return file.type.startsWith("image/");
+    });
+
+    if(!files.length)return;
+
+    try{
+      const existing=await galleryDbGetAll();
+      let order=existing.length;
+
+      for(const file of files){
+        await galleryDbPut({
+          name:file.name,
+          caption:file.name.replace(/\.[a-z0-9]+$/i,""),
+          order:order++,
+          created:new Date().toISOString(),
+          blob:file
+        });
+      }
+
+      galleryAdminUpload.value="";
+      setAdminMessage(
+        galleryAdminMessage,
+        files.length + (files.length===1 ? " image added." : " images added."),
+        "success"
+      );
+      await refreshGallery();
+    }catch(error){
+      console.error(error);
+      setAdminMessage(
+        galleryAdminMessage,
+        "The selected images could not be stored.",
+        "error"
+      );
+    }
+  });
+
+  function renderGalleryAdminList(){
+    galleryAdminList.innerHTML="";
+
+    if(!galleryItems.length){
+      const empty=document.createElement("p");
+      empty.className="admin-note";
+      empty.textContent="No gallery images have been added yet.";
+      galleryAdminList.appendChild(empty);
+      return;
+    }
+
+    galleryItems.forEach(function(item,index){
+      const row=document.createElement("article");
+      row.className="admin-item";
+
+      const image=document.createElement("img");
+      image.src=item.url;
+      image.alt="";
+
+      const fields=document.createElement("div");
+      fields.className="admin-item-fields";
+
+      const caption=document.createElement("input");
+      caption.type="text";
+      caption.value=item.caption || "";
+      caption.placeholder="Public caption";
+      caption.setAttribute("aria-label","Caption for " + item.name);
+
+      const filename=document.createElement("small");
+      filename.textContent=item.name;
+      filename.style.color="var(--muted)";
+
+      fields.appendChild(caption);
+      fields.appendChild(filename);
+
+      const actions=document.createElement("div");
+      actions.className="admin-item-actions";
+
+      const save=document.createElement("button");
+      save.type="button";
+      save.className="btn btn-red";
+      save.textContent="Save Caption";
+      save.addEventListener("click",async function(){
+        const stored=await galleryDbGetAll();
+        const record=stored.find(function(entry){return entry.id===item.id;});
+        if(!record)return;
+
+        record.caption=caption.value.trim();
+        await galleryDbPut(record);
+        setAdminMessage(
+          galleryAdminMessage,
+          "Caption saved.",
+          "success"
+        );
+        await refreshGallery();
+      });
+
+      const up=document.createElement("button");
+      up.type="button";
+      up.className="btn btn-outline";
+      up.textContent="Move Up";
+      up.disabled=index===0;
+      up.addEventListener("click",async function(){
+        await swapGalleryOrder(index,index-1);
+      });
+
+      const down=document.createElement("button");
+      down.type="button";
+      down.className="btn btn-outline";
+      down.textContent="Move Down";
+      down.disabled=index===galleryItems.length-1;
+      down.addEventListener("click",async function(){
+        await swapGalleryOrder(index,index+1);
+      });
+
+      const remove=document.createElement("button");
+      remove.type="button";
+      remove.className="btn btn-outline";
+      remove.textContent="Remove";
+      remove.addEventListener("click",async function(){
+        const confirmed=window.confirm(
+          "Remove this image from the campaign gallery?"
+        );
+        if(!confirmed)return;
+
+        await galleryDbDelete(item.id);
+        setAdminMessage(
+          galleryAdminMessage,
+          "Image removed.",
+          "success"
+        );
+        await refreshGallery();
+      });
+
+      actions.appendChild(save);
+      actions.appendChild(up);
+      actions.appendChild(down);
+      actions.appendChild(remove);
+
+      row.appendChild(image);
+      row.appendChild(fields);
+      row.appendChild(actions);
+      galleryAdminList.appendChild(row);
+    });
+  }
+
+  async function swapGalleryOrder(firstIndex,secondIndex){
+    const stored=await galleryDbGetAll();
+    const first=stored[firstIndex];
+    const second=stored[secondIndex];
+
+    if(!first || !second)return;
+
+    const firstOrder=first.order;
+    first.order=second.order;
+    second.order=firstOrder;
+
+    await galleryDbPut(first);
+    await galleryDbPut(second);
+    await refreshGallery();
+  }
+
+  galleryExport.addEventListener("click",async function(){
+    if(!galleryUnlocked)return;
+
+    try{
+      const stored=await galleryDbGetAll();
+      const exported=[];
+
+      for(const item of stored){
+        const dataUrl=await new Promise(function(resolve,reject){
+          const reader=new FileReader();
+          reader.onload=function(){resolve(reader.result);};
+          reader.onerror=function(){reject(reader.error);};
+          reader.readAsDataURL(item.blob);
+        });
+
+        exported.push({
+          name:item.name,
+          caption:item.caption,
+          order:item.order,
+          created:item.created,
+          type:item.blob.type,
+          dataUrl:dataUrl
+        });
+      }
+
+      const payload={
+        app:"Jennifer Pearl 2028 Campaign Gallery",
+        version:1,
+        exportedAt:new Date().toISOString(),
+        images:exported
+      };
+
+      const blob=new Blob(
+        [JSON.stringify(payload,null,2)],
+        {type:"application/json"}
+      );
+      const url=URL.createObjectURL(blob);
+      const link=document.createElement("a");
+      link.href=url;
+      link.download=
+        "jennifer-pearl-2028-gallery-" +
+        new Date().toISOString().slice(0,10) +
+        ".json";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+
+      setAdminMessage(
+        galleryAdminMessage,
+        "Gallery backup downloaded.",
+        "success"
+      );
+    }catch(error){
+      console.error(error);
+      setAdminMessage(
+        galleryAdminMessage,
+        "The gallery backup could not be created.",
+        "error"
+      );
+    }
+  });
+
+  galleryImport.addEventListener("change",function(){
+    if(!galleryUnlocked)return;
+
+    const file=galleryImport.files && galleryImport.files[0];
+    if(!file)return;
+
+    const reader=new FileReader();
+
+    reader.onload=async function(){
+      try{
+        const payload=JSON.parse(reader.result);
+
+        if(!payload || !Array.isArray(payload.images)){
+          throw new Error("This is not a recognized gallery backup.");
+        }
+
+        const replace=window.confirm(
+          "Replace the current gallery with this backup? " +
+          "Choose Cancel to add the backup images to the existing gallery."
+        );
+
+        if(replace){
+          await galleryDbClear();
+        }
+
+        const existing=await galleryDbGetAll();
+        let order=existing.length;
+
+        for(const item of payload.images){
+          const response=await fetch(item.dataUrl);
+          const blob=await response.blob();
+
+          await galleryDbPut({
+            name:item.name || "Campaign photograph",
+            caption:item.caption || "",
+            order:order++,
+            created:item.created || new Date().toISOString(),
+            blob:blob
+          });
+        }
+
+        galleryImport.value="";
+        setAdminMessage(
+          galleryAdminMessage,
+          "Gallery backup imported.",
+          "success"
+        );
+        await refreshGallery();
+      }catch(error){
+        console.error(error);
+        galleryImport.value="";
+        setAdminMessage(
+          galleryAdminMessage,
+          error.message || "The gallery backup could not be imported.",
+          "error"
+        );
+      }
+    };
+
+    reader.readAsText(file);
+  });
+
+  galleryPrevious.addEventListener("click",function(){
+    stopGallery();
+    showGallery(galleryIndex-1);
+  });
+
+  galleryNext.addEventListener("click",function(){
+    stopGallery();
+    showGallery(galleryIndex+1);
+  });
+
+  galleryPlay.addEventListener("click",function(){
+    if(!galleryItems.length)return;
+
+    if(galleryTimer){
+      stopGallery();
+      return;
+    }
+
+    galleryPlay.textContent="Pause Slideshow";
+    galleryPlay.setAttribute("aria-pressed","true");
+    galleryTimer=window.setInterval(function(){
+      showGallery(galleryIndex+1);
+    },5000);
+  });
+
+  document.addEventListener("keydown",function(event){
+    if(event.key==="Escape" && !galleryAdminModal.hidden){
+      closeAdminModal();
+    }
+  });
+
+  ensurePin()
+    .then(refreshGallery)
+    .catch(function(error){
+      console.error("Gallery initialization failed.",error);
+      galleryStatus.textContent=
+        "The persistent gallery is unavailable in this browser.";
+    });
+
+  form.addEventListener("submit",function(event){
+    event.preventDefault();
+    alert("Thank you for joining Jennifer Pearl 2028. This first-draft form is not yet connected to a mailing service.");
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
