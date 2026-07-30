@@ -570,6 +570,44 @@ body{
   }
 }
 
+
+.portrait-image,
+.bio-image{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+.portrait-image{
+  min-height:470px;
+  max-height:620px;
+  object-position:center;
+}
+
+.bio-image{
+  min-height:450px;
+  object-position:center 28%;
+}
+
+.gallery-error{
+  max-width:680px;
+  margin:1rem auto 0;
+  color:var(--red);
+  font-size:.8rem;
+}
+
+@media(max-width:700px){
+  .portrait-image{
+    min-height:390px;
+  }
+
+  .bio-image{
+    min-height:390px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -584,7 +622,7 @@ body{
     <nav class="links" aria-label="Primary navigation">
       <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
       <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
-      <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join</a><a href="#gallery" id="headerAdminLink">Admin</a>
+      <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join</a>
     </nav>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="mobile" aria-label="Open navigation">☰</button>
   </div>
@@ -608,10 +646,14 @@ body{
         <a class="btn btn-ghost" href="#priorities">Explore the Vision</a>
         <a class="btn btn-ghost" href="#join">Join the Movement</a>
       </div>
-      <p class="note">First-draft campaign landing page with editable image and policy placeholders.</p>
+      <p class="note">Jennifer Pearl 2028 campaign platform, public resources, and verified campaign gallery.</p>
     </div>
     <div class="portrait">
-      <div class="placeholder"><div><strong>Your Campaign Portrait</strong><span>Reserved for a formal photograph with generous breathing room and a dignified composition.</span></div></div>
+      <img
+        class="portrait-image"
+        src="assets/campaign-gallery/003-campaign-portrait.webp"
+        alt="Black-and-white campaign portrait of Jennifer Pearl with stars in the background"
+      >
     </div>
   </div>
 </section>
@@ -743,7 +785,13 @@ body{
 
 <section class="section" id="about">
   <div class="shell bio">
-    <div class="photo"><div><strong>Community Photo Area</strong><span>Use this space for a family, environmental, community, or behind-the-scenes photograph.</span></div></div>
+    <div class="photo">
+      <img
+        class="bio-image"
+        src="assets/campaign-gallery/005-candidate-photo.webp"
+        alt="Black-and-white outdoor portrait of Jennifer Pearl wearing a dark coat and white collared shirt"
+      >
+    </div>
     <div class="bio-copy">
       <p class="eyebrow">Meet Jennifer</p>
       <h2>Artist. Entrepreneur. Builder. Mother. Citizen.</h2>
@@ -779,17 +827,18 @@ body{
       <p class="eyebrow">Campaign gallery</p>
       <h2>People, places, service, and the road to 2028.</h2>
       <p class="lede">
-        A quiet campaign slideshow curated through the private gallery
-        administrator.
+        A public campaign slideshow loaded from the verified repository
+        gallery manifest.
       </p>
     </div>
 
     <div class="gallery-shell">
       <div class="gallery-stage" id="galleryStage" aria-live="polite">
         <div class="gallery-empty" id="galleryEmpty">
-          <strong>The campaign gallery is ready.</strong>
+          <strong>Loading the campaign gallery.</strong>
           <span>
-            Use the private Admin button to add the first campaign photograph.
+            Published images are being read from
+            <code>data/campaign-gallery.json</code>.
           </span>
         </div>
 
@@ -810,13 +859,13 @@ body{
           Next
         </button>
 
-        <button class="btn btn-red" id="galleryAdminOpen" type="button">
-          Gallery Admin
+        <button class="btn btn-red" id="galleryRefresh" type="button">
+          Refresh Published Gallery
         </button>
       </div>
 
       <p class="gallery-status" id="galleryStatus">
-        No campaign images have been published in this browser.
+        Loading published campaign images…
       </p>
 
       <div
@@ -828,105 +877,9 @@ body{
   </div>
 </section>
 
-<div
-  class="admin-modal"
-  id="galleryAdminModal"
-  role="dialog"
-  aria-modal="true"
-  aria-labelledby="galleryAdminTitle"
-  hidden
->
-  <div class="admin-backdrop" data-admin-close></div>
-
-  <div class="admin-dialog">
-    <button
-      class="admin-close"
-      id="galleryAdminClose"
-      type="button"
-      aria-label="Close gallery administration"
-    >
-      ×
-    </button>
-
-    <div id="galleryLoginView">
-      <p class="eyebrow">Private administration</p>
-      <h2 id="galleryAdminTitle">Campaign Gallery Admin</h2>
-      <p class="admin-copy">
-        Enter the gallery security code to add, edit, reorder, or remove
-        campaign images.
-      </p>
-
-      <form class="admin-form" id="galleryLoginForm">
-        <label for="galleryPin">Security code</label>
-        <input
-          id="galleryPin"
-          name="pin"
-          type="password"
-          inputmode="numeric"
-          autocomplete="current-password"
-          maxlength="32"
-          required
-        >
-        <button class="btn btn-red" type="submit">Unlock Gallery</button>
-      </form>
-
-      <p class="admin-note">
-        Initial code: <strong>00000</strong>. Change it after the first login.
-      </p>
-      <p class="admin-message" id="galleryLoginMessage" aria-live="polite"></p>
-    </div>
-
-    <div id="galleryManagerView" hidden>
-      <p class="eyebrow">Gallery unlocked</p>
-      <h2>Manage Campaign Images</h2>
-      <p class="admin-copy">
-        Images are stored persistently in this browser using IndexedDB.
-        Add a caption before publishing each photograph.
-      </p>
-
-      <div class="admin-toolbar">
-        <label class="btn btn-red upload-label">
-          Add Images
-          <input
-            id="galleryAdminUpload"
-            type="file"
-            accept="image/jpeg,image/png,image/webp,image/gif"
-            multiple
-          >
-        </label>
-
-        <button class="btn btn-outline" id="galleryExport" type="button">
-          Export Gallery Backup
-        </button>
-
-        <label class="btn btn-outline upload-label">
-          Import Gallery Backup
-          <input
-            id="galleryImport"
-            type="file"
-            accept="application/json"
-          >
-        </label>
-
-        <button class="btn btn-outline" id="galleryChangePin" type="button">
-          Change Security Code
-        </button>
-
-        <button class="btn btn-outline" id="galleryLock" type="button">
-          Lock Admin
-        </button>
-      </div>
-
-      <p class="admin-message" id="galleryAdminMessage" aria-live="polite"></p>
-
-      <div class="admin-list" id="galleryAdminList"></div>
-    </div>
-  </div>
-</div>
-
 <section class="section alt" id="updates">
   <div class="shell">
-    <div class="heading"><p class="eyebrow">Campaign journal</p><h2>News, policy releases, community visits, and reflections.</h2><p class="lede">First-draft placeholders for future campaign updates.</p></div>
+    <div class="heading"><p class="eyebrow">Campaign journal</p><h2>News, policy releases, community visits, and reflections.</h2><p class="lede">Campaign updates, public-service reports, policy releases, and reflections.</p></div>
     <div class="updates">
       <article class="feature"><span class="meta">Featured update</span><h3>Why national renewal begins in our neighborhoods</h3><p>A reflection on environmental service, community responsibility, and how local action can shape a larger national vision.</p></article>
       <div class="stack">
@@ -1002,6 +955,7 @@ body{
 
 
 
+
   const galleryImage=document.getElementById("galleryImage");
   const galleryEmpty=document.getElementById("galleryEmpty");
   const galleryCaption=document.getElementById("galleryCaption");
@@ -1010,168 +964,13 @@ body{
   const galleryPrevious=document.getElementById("galleryPrevious");
   const galleryNext=document.getElementById("galleryNext");
   const galleryPlay=document.getElementById("galleryPlay");
-  const galleryAdminOpen=document.getElementById("galleryAdminOpen");
-  const galleryAdminModal=document.getElementById("galleryAdminModal");
-  const galleryAdminClose=document.getElementById("galleryAdminClose");
-  const galleryLoginView=document.getElementById("galleryLoginView");
-  const galleryManagerView=document.getElementById("galleryManagerView");
-  const galleryLoginForm=document.getElementById("galleryLoginForm");
-  const galleryPin=document.getElementById("galleryPin");
-  const galleryLoginMessage=document.getElementById("galleryLoginMessage");
-  const galleryAdminUpload=document.getElementById("galleryAdminUpload");
-  const galleryAdminList=document.getElementById("galleryAdminList");
-  const galleryAdminMessage=document.getElementById("galleryAdminMessage");
-  const galleryExport=document.getElementById("galleryExport");
-  const galleryImport=document.getElementById("galleryImport");
-  const galleryChangePin=document.getElementById("galleryChangePin");
-  const galleryLock=document.getElementById("galleryLock");
+  const galleryRefresh=document.getElementById("galleryRefresh");
 
-  const GALLERY_DB_NAME="jennifer_pearl_2028_gallery";
-  const GALLERY_DB_VERSION=1;
-  const GALLERY_STORE="images";
-  const GALLERY_PIN_KEY="jp2028_gallery_pin_hash_v1";
-  const GALLERY_DEFAULT_PIN="00000";
+  const GALLERY_MANIFEST_URL="data/campaign-gallery.json";
 
   let galleryItems=[];
   let galleryIndex=0;
   let galleryTimer=null;
-  let galleryUnlocked=false;
-  let galleryDbPromise=null;
-  let galleryObjectUrls=[];
-
-  function setAdminMessage(element,message,type){
-    element.textContent=message || "";
-    element.className="admin-message" + (type ? " " + type : "");
-  }
-
-  async function hashPin(value){
-    const data=new TextEncoder().encode(String(value));
-    const digest=await crypto.subtle.digest("SHA-256",data);
-    return Array.from(new Uint8Array(digest))
-      .map(function(byte){return byte.toString(16).padStart(2,"0");})
-      .join("");
-  }
-
-  async function ensurePin(){
-    let saved=localStorage.getItem(GALLERY_PIN_KEY);
-    if(!saved){
-      saved=await hashPin(GALLERY_DEFAULT_PIN);
-      localStorage.setItem(GALLERY_PIN_KEY,saved);
-    }
-    return saved;
-  }
-
-  function openGalleryDb(){
-    if(galleryDbPromise)return galleryDbPromise;
-
-    galleryDbPromise=new Promise(function(resolve,reject){
-      const request=indexedDB.open(GALLERY_DB_NAME,GALLERY_DB_VERSION);
-
-      request.onupgradeneeded=function(){
-        const db=request.result;
-        if(!db.objectStoreNames.contains(GALLERY_STORE)){
-          const store=db.createObjectStore(GALLERY_STORE,{
-            keyPath:"id",
-            autoIncrement:true
-          });
-          store.createIndex("order","order",{unique:false});
-        }
-      };
-
-      request.onsuccess=function(){resolve(request.result);};
-      request.onerror=function(){reject(request.error);};
-    });
-
-    return galleryDbPromise;
-  }
-
-  async function galleryDbGetAll(){
-    const db=await openGalleryDb();
-
-    return new Promise(function(resolve,reject){
-      const tx=db.transaction(GALLERY_STORE,"readonly");
-      const request=tx.objectStore(GALLERY_STORE).getAll();
-
-      request.onsuccess=function(){
-        const items=(request.result || []).sort(function(a,b){
-          return (a.order || 0)-(b.order || 0);
-        });
-        resolve(items);
-      };
-
-      request.onerror=function(){reject(request.error);};
-    });
-  }
-
-  async function galleryDbPut(item){
-    const db=await openGalleryDb();
-
-    return new Promise(function(resolve,reject){
-      const tx=db.transaction(GALLERY_STORE,"readwrite");
-      const request=tx.objectStore(GALLERY_STORE).put(item);
-      request.onsuccess=function(){resolve(request.result);};
-      request.onerror=function(){reject(request.error);};
-    });
-  }
-
-  async function galleryDbDelete(id){
-    const db=await openGalleryDb();
-
-    return new Promise(function(resolve,reject){
-      const tx=db.transaction(GALLERY_STORE,"readwrite");
-      const request=tx.objectStore(GALLERY_STORE).delete(id);
-      request.onsuccess=function(){resolve();};
-      request.onerror=function(){reject(request.error);};
-    });
-  }
-
-  async function galleryDbClear(){
-    const db=await openGalleryDb();
-
-    return new Promise(function(resolve,reject){
-      const tx=db.transaction(GALLERY_STORE,"readwrite");
-      const request=tx.objectStore(GALLERY_STORE).clear();
-      request.onsuccess=function(){resolve();};
-      request.onerror=function(){reject(request.error);};
-    });
-  }
-
-  function releaseGalleryUrls(){
-    galleryObjectUrls.forEach(function(url){
-      URL.revokeObjectURL(url);
-    });
-    galleryObjectUrls=[];
-  }
-
-  async function refreshGallery(){
-    releaseGalleryUrls();
-
-    const stored=await galleryDbGetAll();
-    galleryItems=stored.map(function(item){
-      const url=URL.createObjectURL(item.blob);
-      galleryObjectUrls.push(url);
-
-      return {
-        id:item.id,
-        name:item.name || "Campaign photograph",
-        caption:item.caption || "",
-        order:item.order || 0,
-        blob:item.blob,
-        url:url
-      };
-    });
-
-    if(galleryIndex>=galleryItems.length){
-      galleryIndex=Math.max(0,galleryItems.length-1);
-    }
-
-    renderGalleryThumbs();
-    showGallery(galleryIndex);
-
-    if(galleryUnlocked){
-      renderGalleryAdminList();
-    }
-  }
 
   function stopGallery(){
     if(galleryTimer){
@@ -1183,12 +982,29 @@ body{
     galleryPlay.setAttribute("aria-pressed","false");
   }
 
+  function normalizeGalleryPath(value){
+    if(typeof value!=="string")return "";
+    const clean=value.trim().replaceAll("\\\\","/");
+
+    if(
+      !clean ||
+      clean.startsWith("/") ||
+      clean.startsWith("../") ||
+      clean.includes("/../") ||
+      !clean.startsWith("assets/campaign-gallery/")
+    ){
+      return "";
+    }
+
+    return clean;
+  }
+
   function showGallery(index){
     if(!galleryItems.length){
       galleryImage.hidden=true;
       galleryCaption.hidden=true;
       galleryEmpty.hidden=false;
-      galleryStatus.textContent="No campaign images have been published in this browser.";
+      galleryStatus.textContent="No published campaign images are available.";
       galleryThumbs.innerHTML="";
       stopGallery();
       return;
@@ -1199,10 +1015,10 @@ body{
 
     galleryEmpty.hidden=true;
     galleryImage.hidden=false;
-    galleryImage.src=item.url;
-    galleryImage.alt=item.caption || item.name;
-    galleryCaption.textContent=item.caption || item.name;
-    galleryCaption.hidden=false;
+    galleryImage.src=item.file;
+    galleryImage.alt=item.alt;
+    galleryCaption.textContent=item.caption;
+    galleryCaption.hidden=!item.caption;
     galleryStatus.textContent=
       "Slide " + (galleryIndex+1) + " of " + galleryItems.length;
 
@@ -1221,18 +1037,16 @@ body{
       const button=document.createElement("button");
       button.type="button";
       button.className="gallery-thumb";
-      button.setAttribute(
-        "aria-label",
-        "Show " + (item.caption || item.name)
-      );
+      button.setAttribute("aria-label","Show " + item.caption);
       button.setAttribute(
         "aria-current",
         index===galleryIndex ? "true" : "false"
       );
 
       const image=document.createElement("img");
-      image.src=item.url;
+      image.src=item.file;
       image.alt="";
+      image.loading="lazy";
 
       button.appendChild(image);
       button.addEventListener("click",function(){
@@ -1244,429 +1058,82 @@ body{
     });
   }
 
-  function openAdminModal(){
-    galleryAdminModal.hidden=false;
-    document.body.style.overflow="hidden";
-
-    if(galleryUnlocked){
-      galleryLoginView.hidden=true;
-      galleryManagerView.hidden=false;
-      renderGalleryAdminList();
-    }else{
-      galleryLoginView.hidden=false;
-      galleryManagerView.hidden=true;
-      galleryPin.value="";
-      setAdminMessage(galleryLoginMessage,"","");
-      window.setTimeout(function(){galleryPin.focus();},50);
-    }
-  }
-
-  function closeAdminModal(){
-    galleryAdminModal.hidden=true;
-    document.body.style.overflow="";
-    galleryPin.value="";
-  }
-
-  function lockGalleryAdmin(){
-    galleryUnlocked=false;
-    galleryLoginView.hidden=false;
-    galleryManagerView.hidden=true;
-    closeAdminModal();
-  }
-
-
-  const headerAdminLink=document.getElementById("headerAdminLink");
-  if(headerAdminLink){
-    headerAdminLink.addEventListener("click",function(event){
-      event.preventDefault();
-      openAdminModal();
-    });
-  }
-
-  galleryAdminOpen.addEventListener("click",openAdminModal);
-  galleryAdminClose.addEventListener("click",closeAdminModal);
-
-  galleryAdminModal.querySelectorAll("[data-admin-close]").forEach(function(item){
-    item.addEventListener("click",closeAdminModal);
-  });
-
-  galleryLoginForm.addEventListener("submit",async function(event){
-    event.preventDefault();
+  async function loadPublishedGallery(){
+    stopGallery();
+    galleryStatus.textContent="Loading published campaign images…";
 
     try{
-      const saved=await ensurePin();
-      const entered=await hashPin(galleryPin.value);
+      const response=await fetch(
+        GALLERY_MANIFEST_URL + "?v=" + Date.now(),
+        {
+          cache:"no-store",
+          headers:{"Accept":"application/json"}
+        }
+      );
 
-      if(entered!==saved){
-        setAdminMessage(
-          galleryLoginMessage,
-          "The security code is incorrect.",
-          "error"
+      if(!response.ok){
+        throw new Error(
+          "Gallery manifest request failed with status " + response.status + "."
         );
-        galleryPin.select();
-        return;
       }
 
-      galleryUnlocked=true;
-      galleryLoginView.hidden=true;
-      galleryManagerView.hidden=false;
-      setAdminMessage(galleryLoginMessage,"","");
-      setAdminMessage(
-        galleryAdminMessage,
-        "Gallery unlocked.",
-        "success"
-      );
-      await refreshGallery();
-    }catch(error){
-      console.error(error);
-      setAdminMessage(
-        galleryLoginMessage,
-        "The gallery could not be unlocked in this browser.",
-        "error"
-      );
-    }
-  });
+      const manifest=await response.json();
 
-  galleryLock.addEventListener("click",lockGalleryAdmin);
+      if(!manifest || !Array.isArray(manifest.images)){
+        throw new Error("The gallery manifest does not contain an images array.");
+      }
 
-  galleryChangePin.addEventListener("click",async function(){
-    if(!galleryUnlocked)return;
-
-    const current=window.prompt("Enter the current security code:");
-    if(current===null)return;
-
-    const saved=await ensurePin();
-    const currentHash=await hashPin(current);
-
-    if(currentHash!==saved){
-      setAdminMessage(
-        galleryAdminMessage,
-        "The current security code was not correct.",
-        "error"
-      );
-      return;
-    }
-
-    const next=window.prompt(
-      "Enter a new security code. Use at least five characters:"
-    );
-
-    if(next===null)return;
-
-    if(next.length<5){
-      setAdminMessage(
-        galleryAdminMessage,
-        "The new security code must contain at least five characters.",
-        "error"
-      );
-      return;
-    }
-
-    const confirmNext=window.prompt("Enter the new security code again:");
-
-    if(confirmNext!==next){
-      setAdminMessage(
-        galleryAdminMessage,
-        "The two new security codes did not match.",
-        "error"
-      );
-      return;
-    }
-
-    localStorage.setItem(GALLERY_PIN_KEY,await hashPin(next));
-    setAdminMessage(
-      galleryAdminMessage,
-      "The gallery security code has been changed.",
-      "success"
-    );
-  });
-
-  galleryAdminUpload.addEventListener("change",async function(){
-    if(!galleryUnlocked)return;
-
-    const files=Array.from(galleryAdminUpload.files || []).filter(function(file){
-      return file.type.startsWith("image/");
-    });
-
-    if(!files.length)return;
-
-    try{
-      const existing=await galleryDbGetAll();
-      let order=existing.length;
-
-      for(const file of files){
-        await galleryDbPut({
-          name:file.name,
-          caption:file.name.replace(/\.[a-z0-9]+$/i,""),
-          order:order++,
-          created:new Date().toISOString(),
-          blob:file
+      galleryItems=manifest.images
+        .filter(function(item){
+          return item && item.published!==false;
+        })
+        .map(function(item,index){
+          return {
+            file:normalizeGalleryPath(item.file),
+            caption:
+              typeof item.caption==="string" && item.caption.trim()
+                ? item.caption.trim()
+                : "Campaign photograph " + (index+1),
+            alt:
+              typeof item.alt==="string" && item.alt.trim()
+                ? item.alt.trim()
+                : "Jennifer Pearl 2028 campaign photograph",
+            order:Number.isFinite(Number(item.order))
+              ? Number(item.order)
+              : index+1
+          };
+        })
+        .filter(function(item){
+          return Boolean(item.file);
+        })
+        .sort(function(a,b){
+          return a.order-b.order;
         });
+
+      galleryIndex=0;
+      renderGalleryThumbs();
+      showGallery(0);
+
+      if(galleryItems.length){
+        galleryStatus.textContent=
+          galleryItems.length +
+          (galleryItems.length===1
+            ? " published campaign image."
+            : " published campaign images.");
       }
-
-      galleryAdminUpload.value="";
-      setAdminMessage(
-        galleryAdminMessage,
-        files.length + (files.length===1 ? " image added." : " images added."),
-        "success"
-      );
-      await refreshGallery();
     }catch(error){
-      console.error(error);
-      setAdminMessage(
-        galleryAdminMessage,
-        "The selected images could not be stored.",
-        "error"
-      );
+      console.error("Published gallery could not be loaded.",error);
+      galleryItems=[];
+      renderGalleryThumbs();
+      showGallery(0);
+      galleryEmpty.innerHTML=
+        "<strong>The gallery could not be loaded.</strong>" +
+        "<span>Confirm that data/campaign-gallery.json and the referenced " +
+        "files are in the repository, then refresh this page.</span>";
+      galleryStatus.textContent=
+        "Published gallery unavailable: " + error.message;
     }
-  });
-
-  function renderGalleryAdminList(){
-    galleryAdminList.innerHTML="";
-
-    if(!galleryItems.length){
-      const empty=document.createElement("p");
-      empty.className="admin-note";
-      empty.textContent="No gallery images have been added yet.";
-      galleryAdminList.appendChild(empty);
-      return;
-    }
-
-    galleryItems.forEach(function(item,index){
-      const row=document.createElement("article");
-      row.className="admin-item";
-
-      const image=document.createElement("img");
-      image.src=item.url;
-      image.alt="";
-
-      const fields=document.createElement("div");
-      fields.className="admin-item-fields";
-
-      const caption=document.createElement("input");
-      caption.type="text";
-      caption.value=item.caption || "";
-      caption.placeholder="Public caption";
-      caption.setAttribute("aria-label","Caption for " + item.name);
-
-      const filename=document.createElement("small");
-      filename.textContent=item.name;
-      filename.style.color="var(--muted)";
-
-      fields.appendChild(caption);
-      fields.appendChild(filename);
-
-      const actions=document.createElement("div");
-      actions.className="admin-item-actions";
-
-      const save=document.createElement("button");
-      save.type="button";
-      save.className="btn btn-red";
-      save.textContent="Save Caption";
-      save.addEventListener("click",async function(){
-        const stored=await galleryDbGetAll();
-        const record=stored.find(function(entry){return entry.id===item.id;});
-        if(!record)return;
-
-        record.caption=caption.value.trim();
-        await galleryDbPut(record);
-        setAdminMessage(
-          galleryAdminMessage,
-          "Caption saved.",
-          "success"
-        );
-        await refreshGallery();
-      });
-
-      const up=document.createElement("button");
-      up.type="button";
-      up.className="btn btn-outline";
-      up.textContent="Move Up";
-      up.disabled=index===0;
-      up.addEventListener("click",async function(){
-        await swapGalleryOrder(index,index-1);
-      });
-
-      const down=document.createElement("button");
-      down.type="button";
-      down.className="btn btn-outline";
-      down.textContent="Move Down";
-      down.disabled=index===galleryItems.length-1;
-      down.addEventListener("click",async function(){
-        await swapGalleryOrder(index,index+1);
-      });
-
-      const remove=document.createElement("button");
-      remove.type="button";
-      remove.className="btn btn-outline";
-      remove.textContent="Remove";
-      remove.addEventListener("click",async function(){
-        const confirmed=window.confirm(
-          "Remove this image from the campaign gallery?"
-        );
-        if(!confirmed)return;
-
-        await galleryDbDelete(item.id);
-        setAdminMessage(
-          galleryAdminMessage,
-          "Image removed.",
-          "success"
-        );
-        await refreshGallery();
-      });
-
-      actions.appendChild(save);
-      actions.appendChild(up);
-      actions.appendChild(down);
-      actions.appendChild(remove);
-
-      row.appendChild(image);
-      row.appendChild(fields);
-      row.appendChild(actions);
-      galleryAdminList.appendChild(row);
-    });
   }
-
-  async function swapGalleryOrder(firstIndex,secondIndex){
-    const stored=await galleryDbGetAll();
-    const first=stored[firstIndex];
-    const second=stored[secondIndex];
-
-    if(!first || !second)return;
-
-    const firstOrder=first.order;
-    first.order=second.order;
-    second.order=firstOrder;
-
-    await galleryDbPut(first);
-    await galleryDbPut(second);
-    await refreshGallery();
-  }
-
-  galleryExport.addEventListener("click",async function(){
-    if(!galleryUnlocked)return;
-
-    try{
-      const stored=await galleryDbGetAll();
-      const exported=[];
-
-      for(const item of stored){
-        const dataUrl=await new Promise(function(resolve,reject){
-          const reader=new FileReader();
-          reader.onload=function(){resolve(reader.result);};
-          reader.onerror=function(){reject(reader.error);};
-          reader.readAsDataURL(item.blob);
-        });
-
-        exported.push({
-          name:item.name,
-          caption:item.caption,
-          order:item.order,
-          created:item.created,
-          type:item.blob.type,
-          dataUrl:dataUrl
-        });
-      }
-
-      const payload={
-        app:"Jennifer Pearl 2028 Campaign Gallery",
-        version:1,
-        exportedAt:new Date().toISOString(),
-        images:exported
-      };
-
-      const blob=new Blob(
-        [JSON.stringify(payload,null,2)],
-        {type:"application/json"}
-      );
-      const url=URL.createObjectURL(blob);
-      const link=document.createElement("a");
-      link.href=url;
-      link.download=
-        "jennifer-pearl-2028-gallery-" +
-        new Date().toISOString().slice(0,10) +
-        ".json";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      URL.revokeObjectURL(url);
-
-      setAdminMessage(
-        galleryAdminMessage,
-        "Gallery backup downloaded.",
-        "success"
-      );
-    }catch(error){
-      console.error(error);
-      setAdminMessage(
-        galleryAdminMessage,
-        "The gallery backup could not be created.",
-        "error"
-      );
-    }
-  });
-
-  galleryImport.addEventListener("change",function(){
-    if(!galleryUnlocked)return;
-
-    const file=galleryImport.files && galleryImport.files[0];
-    if(!file)return;
-
-    const reader=new FileReader();
-
-    reader.onload=async function(){
-      try{
-        const payload=JSON.parse(reader.result);
-
-        if(!payload || !Array.isArray(payload.images)){
-          throw new Error("This is not a recognized gallery backup.");
-        }
-
-        const replace=window.confirm(
-          "Replace the current gallery with this backup? " +
-          "Choose Cancel to add the backup images to the existing gallery."
-        );
-
-        if(replace){
-          await galleryDbClear();
-        }
-
-        const existing=await galleryDbGetAll();
-        let order=existing.length;
-
-        for(const item of payload.images){
-          const response=await fetch(item.dataUrl);
-          const blob=await response.blob();
-
-          await galleryDbPut({
-            name:item.name || "Campaign photograph",
-            caption:item.caption || "",
-            order:order++,
-            created:item.created || new Date().toISOString(),
-            blob:blob
-          });
-        }
-
-        galleryImport.value="";
-        setAdminMessage(
-          galleryAdminMessage,
-          "Gallery backup imported.",
-          "success"
-        );
-        await refreshGallery();
-      }catch(error){
-        console.error(error);
-        galleryImport.value="";
-        setAdminMessage(
-          galleryAdminMessage,
-          error.message || "The gallery backup could not be imported.",
-          "error"
-        );
-      }
-    };
-
-    reader.readAsText(file);
-  });
 
   galleryPrevious.addEventListener("click",function(){
     stopGallery();
@@ -1693,19 +1160,14 @@ body{
     },5000);
   });
 
-  document.addEventListener("keydown",function(event){
-    if(event.key==="Escape" && !galleryAdminModal.hidden){
-      closeAdminModal();
-    }
+  galleryRefresh.addEventListener("click",loadPublishedGallery);
+
+  galleryImage.addEventListener("error",function(){
+    galleryStatus.textContent=
+      "One gallery image could not be displayed. Check its repository filename.";
   });
 
-  ensurePin()
-    .then(refreshGallery)
-    .catch(function(error){
-      console.error("Gallery initialization failed.",error);
-      galleryStatus.textContent=
-        "The persistent gallery is unavailable in this browser.";
-    });
+  loadPublishedGallery();
 
   form.addEventListener("submit",function(event){
     event.preventDefault();
