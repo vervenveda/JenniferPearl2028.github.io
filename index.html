@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Jennifer Pearl 2028 — transparent government, national renewal, stronger communities, and a future built together.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light">
 <meta name="theme-color" content="#0b1f33">
 <title>Jennifer Pearl 2028</title>
 <style>
@@ -608,6 +610,329 @@ body{
   }
 }
 
+
+/* ==========================================================
+   FINAL CAMPAIGN INTEGRITY + EXPANDABLE LAYOUT
+   ========================================================== */
+:root{
+  --campaign-success:#24634f;
+  --campaign-soft:#efe9df;
+}
+html{scroll-padding-top:92px}
+body{overflow-x:hidden}
+h1,h2,h3{
+  letter-spacing:.005em;
+  overflow-wrap:anywhere;
+  text-wrap:balance;
+}
+h1{line-height:.98}
+h2{line-height:1.08}
+h3{line-height:1.28}
+.hero h1 span{line-height:1.25}
+.hero-copy,.heading,.story,.quote,.policy,.record,.gateway-card,.bio-copy,.principle,.update,.feature,.join{
+  min-width:0;
+}
+.campaign-identity{
+  color:rgba(255,255,255,.82);
+  background:#081725;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.campaign-identity-inner{
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:.45rem 1rem;
+  padding:.45rem 0;
+  font-size:.67rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.campaign-identity-inner span{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+}
+.campaign-identity-inner span:not(:last-child)::after{
+  content:"";
+  width:1px;
+  height:12px;
+  margin-left:.55rem;
+  background:rgba(255,255,255,.24);
+}
+.campaign-identity a{color:#e6d8be;text-decoration:underline;text-underline-offset:3px}
+
+.hero-grid{min-height:690px}
+.hero-copy{max-width:720px;margin-inline:auto}
+.hero h1{font-size:clamp(3.65rem,8.5vw,7.2rem)}
+.hero h1 span{font-size:.38em;letter-spacing:.15em}
+.note{
+  max-width:680px;
+  margin-inline:auto;
+  line-height:1.6;
+}
+.section-heading-break{display:block}
+.policy-grid,.record-grid,.gateway-grid,.principles{align-items:stretch}
+.policy,.record,.gateway-card,.principle{
+  height:100%;
+}
+.policy{
+  align-items:center;
+}
+.policy h3{
+  min-height:3.25em;
+  display:grid;
+  place-items:center;
+}
+.policy p{flex:1}
+.policy a{
+  width:100%;
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.7rem .8rem;
+  border:1px solid var(--gold);
+  border-radius:7px;
+  overflow-wrap:anywhere;
+}
+.policy a:hover{color:white;background:var(--navy);border-color:var(--navy)}
+.record{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.record h3{
+  min-height:2.6em;
+  display:grid;
+  place-items:center;
+}
+.record p{flex:1}
+.record-link{
+  width:100%;
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1rem;
+  padding:.65rem .75rem;
+  color:#fff;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:7px;
+  font-size:.7rem;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.record-link:hover{background:var(--red);border-color:var(--red)}
+.gateway-card h3{
+  min-height:2.6em;
+  display:grid;
+  place-items:center;
+}
+.gateway-card p{flex:1}
+.gateway-card .btn{margin-top:auto}
+
+.campaign-boundary{
+  max-width:880px;
+  margin:0 auto 2rem;
+  padding:1.15rem 1.25rem;
+  border:1px solid #d5c39f;
+  border-left:4px solid var(--gold);
+  border-radius:7px;
+  color:var(--navy);
+  background:#f3ede2;
+  text-align:center;
+}
+.campaign-boundary strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:1.08rem;
+  font-weight:400;
+}
+.campaign-boundary span{
+  display:block;
+  margin-top:.35rem;
+  color:var(--muted);
+  font-size:.8rem;
+  line-height:1.6;
+}
+
+.status-tag{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:26px;
+  padding:.3rem .55rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--navy);
+  background:#f1ece3;
+  font-size:.62rem;
+  letter-spacing:.075em;
+  text-transform:uppercase;
+}
+.status-tag.draft{color:#6f2429;background:#f5e6e6;border-color:#ddbec0}
+.status-tag.ready{color:#24634f;background:#e8f1ec;border-color:#bed3c7}
+.update{
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+}
+.update .status-tag,.feature .status-tag{align-self:center;margin-bottom:.65rem}
+.feature{align-items:center}
+
+.join{
+  grid-template-columns:1.15fr .85fr;
+}
+.join-status{
+  max-width:650px;
+  margin:1.35rem auto 0;
+  padding:1rem 1.1rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  color:var(--muted);
+  background:#f7f3ec;
+  font-size:.8rem;
+  line-height:1.65;
+}
+.join-actions{align-content:center}
+.join-actions .btn{width:100%}
+button.btn{font-family:inherit}
+.btn[disabled],.btn[aria-disabled="true"]{
+  opacity:.62;
+  cursor:not-allowed;
+  transform:none!important;
+  box-shadow:none!important;
+}
+.share-status{
+  grid-column:1/-1;
+  min-height:1.2em;
+  color:var(--muted);
+  font-size:.72rem;
+}
+
+.information-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.85rem;
+}
+.information-card{
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:1.35rem;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--surface);
+}
+.information-card h3{margin-top:.75rem;color:var(--navy)}
+.information-card p{flex:1;margin-top:.7rem;color:var(--muted);font-size:.8rem}
+.information-card a{
+  width:100%;
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1rem;
+  padding:.65rem;
+  color:var(--navy);
+  border:1px solid var(--gold);
+  border-radius:7px;
+  font-size:.7rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+
+.disclaimer-wrap{
+  padding:1.25rem 0;
+  color:#fff;
+  background:#06131f;
+  border-top:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.campaign-disclaimer{
+  max-width:880px;
+  margin:auto;
+  padding:1rem 1.15rem;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:7px;
+  text-align:center;
+}
+.campaign-disclaimer strong{
+  display:block;
+  color:#fff;
+  font-family:var(--serif);
+  font-size:1rem;
+  font-weight:400;
+  letter-spacing:.035em;
+}
+.campaign-disclaimer span{
+  display:block;
+  margin-top:.4rem;
+  color:rgba(255,255,255,.65);
+  font-size:.72rem;
+  line-height:1.6;
+}
+.campaign-disclaimer a{color:#e6d8be;text-decoration:underline;text-underline-offset:3px}
+
+.image-fallback{
+  width:100%;
+  min-height:inherit;
+  display:grid;
+  place-items:center;
+  padding:2rem;
+  border:1px dashed rgba(255,255,255,.28);
+  border-radius:7px;
+  color:rgba(255,255,255,.7);
+  background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  text-align:center;
+}
+.photo .image-fallback{
+  color:var(--muted);
+  border-color:var(--line);
+  background:linear-gradient(135deg,#e3ddd3,#f7f3eb);
+}
+.image-fallback strong{
+  display:block;
+  color:inherit;
+  font-family:var(--serif);
+  font-size:1.45rem;
+  font-weight:400;
+}
+.image-fallback span{
+  display:block;
+  max-width:310px;
+  margin-top:.55rem;
+  font-size:.76rem;
+}
+.gallery-stage:focus-within{outline:3px solid var(--gold);outline-offset:3px}
+
+.footer a{overflow-wrap:anywhere}
+.footer-grid{align-items:start}
+.footer-links a{padding:.15rem 0}
+.bottom{font-size:.72rem}
+.no-government{
+  color:#e6d8be;
+  font-size:.68rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+@media(max-width:1000px){
+  .information-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .campaign-identity-inner{padding:.6rem 0}
+  .campaign-identity-inner span:not(:last-child)::after{display:none}
+  .hero h1{font-size:clamp(3.1rem,16vw,5.2rem)}
+  .policy h3,.record h3,.gateway-card h3{min-height:0}
+  .information-grid{grid-template-columns:1fr}
+  .join{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -628,6 +953,14 @@ body{
   </div>
 </header>
 
+<div class="campaign-identity" role="note" aria-label="Campaign website notice">
+  <div class="shell campaign-identity-inner">
+    <span>Official campaign landing page</span>
+    <span>Not a government website</span>
+    <span><a href="#disclosures">Campaign disclosures</a></span>
+  </div>
+</div>
+
 <nav class="mobile" id="mobile" aria-label="Mobile navigation">
   <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
   <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
@@ -646,11 +979,11 @@ body{
         <a class="btn btn-ghost" href="#priorities">Explore the Vision</a>
         <a class="btn btn-ghost" href="#join">Join the Movement</a>
       </div>
-      <p class="note">Jennifer Pearl 2028 campaign platform, public resources, and verified campaign gallery.</p>
+      <p class="note">Jennifer Pearl 2028 campaign platform, public resources, and repository-managed campaign gallery. This campaign page is separate from government agencies and official election administration.</p>
     </div>
     <div class="portrait">
       <img
-        class="portrait-image"
+        class="portrait-image" id="heroPortrait" loading="eager" decoding="async"
         src="assets/campaign-gallery/003-campaign-portrait.webp"
         alt="Black-and-white campaign portrait of Jennifer Pearl with stars in the background"
       >
@@ -683,19 +1016,19 @@ body{
   <div class="shell">
     <div class="heading">
       <p class="eyebrow">The American Renewal Plan</p>
-      <h2>Clear priorities. Public accountability. Measurable progress.</h2>
+      <h2>Clear priorities.<span class="section-heading-break">Public accountability. Measurable progress.</span></h2>
       <p class="lede">Each priority can grow into a plain-language policy brief with goals, timelines, funding pathways, public dashboards, and opportunities for citizen participation.</p>
     </div>
     <div class="policy-grid">
-      <article class="policy"><span class="num">Priority 01</span><h3>Government Transparency</h3><p>Plain-language agencies, open public data, stronger ethics rules, accessible records, and meaningful accountability.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 02</span><h3>Economic Security</h3><p>A stronger foundation for working families, small businesses, responsible entrepreneurship, fair markets, and household stability.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 03</span><h3>Health and Family Stability</h3><p>Understandable health systems, prevention, affordable care, family support, senior assistance, and reliable medicine access.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 04</span><h3>Environmental Renewal</h3><p>Clean water, resilient communities, restored public lands, healthier neighborhoods, and practical local action.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 05</span><h3>Housing and Property Protection</h3><p>Respect for primary residences, stronger affordability, improved insurance stability, and protection from displacement.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 06</span><h3>Education and Opportunity</h3><p>Free learning resources, civic education, workforce preparation, arts and humanities, and lifelong learning.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 07</span><h3>Veterans and Community Care</h3><p>Better coordination for veterans, homelessness prevention, mental health, local services, and no-wrong-door support.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 08</span><h3>Ethical Technology</h3><p>Human-centered technology, public-interest AI, privacy, accessibility, digital literacy, and safeguards against abuse.</p><a href="#join">Developing brief →</a></article>
-      <article class="policy"><span class="num">Priority 09</span><h3>Rights and National Unity</h3><p>Protecting liberty, encouraging civic participation, rebuilding trust, and creating space to solve difficult problems together.</p><a href="#join">Developing brief →</a></article>
+      <article class="policy"><span class="num">Priority 01</span><h3>Government Transparency</h3><p>Plain-language agencies, open public data, stronger ethics rules, accessible records, and meaningful accountability.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 02</span><h3>Economic Security</h3><p>A stronger foundation for working families, small businesses, responsible entrepreneurship, fair markets, and household stability.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 03</span><h3>Health and Family Stability</h3><p>Understandable health systems, prevention, affordable care, family support, senior assistance, and reliable medicine access.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 04</span><h3>Environmental Renewal</h3><p>Clean water, resilient communities, restored public lands, healthier neighborhoods, and practical local action.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 05</span><h3>Housing and Property Protection</h3><p>Respect for primary residences, stronger affordability, improved insurance stability, and protection from displacement.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 06</span><h3>Education and Opportunity</h3><p>Free learning resources, civic education, workforce preparation, arts and humanities, and lifelong learning.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 07</span><h3>Veterans and Community Care</h3><p>Better coordination for veterans, homelessness prevention, mental health, local services, and no-wrong-door support.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 08</span><h3>Ethical Technology</h3><p>Human-centered technology, public-interest AI, privacy, accessibility, digital literacy, and safeguards against abuse.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
+      <article class="policy"><span class="num">Priority 09</span><h3>Rights and National Unity</h3><p>Protecting liberty, encouraging civic participation, rebuilding trust, and creating space to solve difficult problems together.</p><a href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Open policy library ↗</a></article>
     </div>
   </div>
 </section>
@@ -705,63 +1038,51 @@ body{
   <div class="shell">
     <div class="heading">
       <p class="eyebrow">Read, learn, and participate</p>
-      <h2>Editorial, voter, and civic information.</h2>
-      <p class="lede">
-        Follow the campaign into the wider public network for long-form
-        editorial writing, voter education, and nonpartisan civic resources.
-      </p>
+      <h2>Campaign context.<span class="section-heading-break">Independent civic information.</span></h2>
+      <p class="lede">Campaign materials are presented separately from official election administration. Use the government gateways below for authoritative voter and federal-election information.</p>
+    </div>
+
+    <div class="campaign-boundary">
+      <strong>Campaign and civic resources are not the same thing.</strong>
+      <span>Jennifer Pearl 2028 presents the candidate’s platform and public record. Vote.gov, the Federal Election Commission, and USA.gov remain the authoritative starting points for registration, federal campaign-finance information, and official election guidance.</span>
     </div>
 
     <div class="gateway-grid">
       <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">E</span>
+        <span class="gateway-icon" aria-hidden="true">JP</span>
         <h3>Jennifer Pearl Editorials</h3>
-        <p>
-          Read Jennifer's published commentary, public reflections, and
-          long-form editorial work inside The Verifier.
-        </p>
-        <a
-          class="btn btn-outline"
-          href="https://vervenveda.github.io/theverifier.github.io/#columns"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Open the Editorial Desk
-        </a>
+        <p>Read Jennifer’s published commentary, public reflections, and long-form editorial work inside The Verifier.</p>
+        <a class="btn btn-outline" href="https://vervenveda.github.io/theverifier.github.io/#columns" target="_blank" rel="noopener noreferrer">Open the Editorial Desk</a>
       </article>
-
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">1N</span>
+        <h3>One Nation For All</h3>
+        <p>Explore civic learning, voter education, constitutional study, public policy, veterans resources, and community pathways.</p>
+        <a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">Enter the Civic Gateway</a>
+      </article>
       <article class="gateway-card">
         <span class="gateway-icon" aria-hidden="true">V</span>
-        <h3>Voter Hub</h3>
-        <p>
-          Find voter education, participation guidance, election-learning
-          portals, and pathways into the One Nation For All civic network.
-        </p>
-        <a
-          class="btn btn-outline"
-          href="https://vervenveda.github.io/onenationforall.github.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visit the Voter Hub
-        </a>
+        <h3>Vote.gov</h3>
+        <p>Use the official federal starting point for voter registration guidance in your state or territory.</p>
+        <a class="btn btn-outline" href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Open Vote.gov</a>
       </article>
-
       <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">C</span>
-        <h3>Civic Information</h3>
-        <p>
-          Explore plain-language government, constitutional learning, public
-          policy, civic participation, and community resources.
-        </p>
-        <a
-          class="btn btn-outline"
-          href="https://vervenveda.github.io/onenationforall.github.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore Civic Information
-        </a>
+        <span class="gateway-icon" aria-hidden="true">FEC</span>
+        <h3>Federal Election Commission</h3>
+        <p>Review official federal candidate, committee, filing, disclosure, and campaign-finance information.</p>
+        <a class="btn btn-outline" href="https://www.fec.gov/data/candidates/" target="_blank" rel="noopener noreferrer">Browse FEC Candidate Data</a>
+      </article>
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">US</span>
+        <h3>USA.gov Elections</h3>
+        <p>Find official election, voting, state-office, and public-government information from the United States government.</p>
+        <a class="btn btn-outline" href="https://www.usa.gov/voting-and-elections" target="_blank" rel="noopener noreferrer">Open USA.gov</a>
+      </article>
+      <article class="gateway-card">
+        <span class="gateway-icon" aria-hidden="true">VNV</span>
+        <h3>Verve N Veda</h3>
+        <p>Visit the wider public network connecting education, research, health, law, environment, culture, and community tools.</p>
+        <a class="btn btn-outline" href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Explore the Public Network</a>
       </article>
     </div>
   </div>
@@ -769,16 +1090,20 @@ body{
 
 <section class="section dark" id="record">
   <div class="shell">
-    <div class="heading"><p class="eyebrow">A record of building</p><h2>Public-service work already underway.</h2><p class="lede">The campaign is grounded in an expanding network of free public resources, educational spaces, civic tools, environmental projects, and community-centered platforms.</p></div>
+    <div class="heading">
+      <p class="eyebrow">A record of building</p>
+      <h2>Public-service work<span class="section-heading-break">already underway.</span></h2>
+      <p class="lede">The campaign is grounded in an expanding network of free public resources, educational spaces, civic tools, environmental projects, and community-centered platforms.</p>
+    </div>
     <div class="record-grid">
-      <article class="record"><span class="icon">V</span><h3>Verve N Veda</h3><p>A public gateway connecting education, research, culture, community resources, and civic tools.</p></article>
-      <article class="record"><span class="icon">1</span><h3>One Nation For All</h3><p>Civic dialogue, policy learning, public participation, and solutions grounded in dignity and unity.</p></article>
-      <article class="record"><span class="icon">KA</span><h3>Archaemenes Academy</h3><p>A free educational vision supporting learners, families, educators, and lifelong curiosity.</p></article>
-      <article class="record"><span class="icon">R</span><h3>River to Road</h3><p>Community environmental action focused on neighborhood cleanup, stewardship, and restoration.</p></article>
-      <article class="record"><span class="icon">F</span><h3>Firmament Law</h3><p>Public legal education, rights resources, practical guides, and understandable civic information.</p></article>
-      <article class="record"><span class="icon">M</span><h3>Medicament Hub</h3><p>Whole-person health education, family support, medical resources, and accessible public guidance.</p></article>
-      <article class="record"><span class="icon">V</span><h3>The Verifier</h3><p>Independent news discovery, source comparison, research tools, education, and public-interest information.</p></article>
-      <article class="record"><span class="icon">⌕</span><h3>PLERA Search</h3><p>A sovereign gateway into trusted resources, public directories, and connected knowledge.</p></article>
+      <article class="record"><span class="icon">V</span><h3>Verve N Veda</h3><p>A public gateway connecting education, research, culture, community resources, and civic tools.</p><a class="record-link" href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Visit gateway ↗</a></article>
+      <article class="record"><span class="icon">1N</span><h3>One Nation For All</h3><p>Civic dialogue, policy learning, public participation, and solutions grounded in dignity and unity.</p><a class="record-link" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">Visit civic hub ↗</a></article>
+      <article class="record"><span class="icon">KA</span><h3>Khaemenes Academy</h3><p>A free educational network supporting learners, families, educators, and lifelong curiosity.</p><a class="record-link" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer">Visit academy ↗</a></article>
+      <article class="record"><span class="icon">R</span><h3>River to Road</h3><p>Community environmental action focused on neighborhood cleanup, stewardship, and restoration.</p><a class="record-link" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener noreferrer">Visit project ↗</a></article>
+      <article class="record"><span class="icon">F</span><h3>Firmament Law</h3><p>Public legal education, rights resources, practical guides, and understandable civic information.</p><a class="record-link" href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener noreferrer">Visit legal hub ↗</a></article>
+      <article class="record"><span class="icon">M</span><h3>Medicament Hub</h3><p>Whole-person health education, family support, medical resources, and accessible public guidance.</p><a class="record-link" href="https://vervenveda.github.io/medicament-hub.github.io/" target="_blank" rel="noopener noreferrer">Visit health hub ↗</a></article>
+      <article class="record"><span class="icon">V</span><h3>The Verifier</h3><p>Independent news discovery, source comparison, research tools, education, and public-interest information.</p><a class="record-link" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer">Visit newsroom ↗</a></article>
+      <article class="record"><span class="icon">⌕</span><h3>PLERA Search</h3><p>A sovereign gateway into trusted resources, public directories, and connected knowledge.</p><a class="record-link" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener noreferrer">Open search ↗</a></article>
     </div>
   </div>
 </section>
@@ -787,7 +1112,7 @@ body{
   <div class="shell bio">
     <div class="photo">
       <img
-        class="bio-image"
+        class="bio-image" id="bioPortrait" loading="lazy" decoding="async"
         src="assets/campaign-gallery/005-candidate-photo.webp"
         alt="Black-and-white outdoor portrait of Jennifer Pearl wearing a dark coat and white collared shirt"
       >
@@ -879,13 +1204,17 @@ body{
 
 <section class="section alt" id="updates">
   <div class="shell">
-    <div class="heading"><p class="eyebrow">Campaign journal</p><h2>News, policy releases, community visits, and reflections.</h2><p class="lede">Campaign updates, public-service reports, policy releases, and reflections.</p></div>
+    <div class="heading">
+      <p class="eyebrow">Campaign journal</p>
+      <h2>News, policy releases,<span class="section-heading-break">community visits, and reflections.</span></h2>
+      <p class="lede">This journal structure is ready for dated campaign posts. The entries below remain clearly marked as editorial drafts until linked to published releases.</p>
+    </div>
     <div class="updates">
-      <article class="feature"><span class="meta">Featured update</span><h3>Why national renewal begins in our neighborhoods</h3><p>A reflection on environmental service, community responsibility, and how local action can shape a larger national vision.</p></article>
+      <article class="feature"><span class="status-tag draft">Editorial draft</span><span class="meta">Featured update</span><h3>Why national renewal begins in our neighborhoods</h3><p>A reflection on environmental service, community responsibility, and how local action can shape a larger national vision.</p></article>
       <div class="stack">
-        <article class="update"><span class="meta">Policy release</span><h3>A plain-language government standard</h3><p>A framework for making public agencies, programs, budgets, and records easier to understand.</p></article>
-        <article class="update"><span class="meta">Campaign reflection</span><h3>Leadership without performance</h3><p>Thoughts on listening, humility, responsibility, and the steady work required to rebuild public trust.</p></article>
-        <article class="update"><span class="meta">Community work</span><h3>River to Road: service before slogans</h3><p>A community cleanup and restoration update focused on visible environmental stewardship.</p></article>
+        <article class="update"><span class="status-tag draft">Draft</span><span class="meta">Policy release</span><h3>A plain-language government standard</h3><p>A framework for making public agencies, programs, budgets, and records easier to understand.</p></article>
+        <article class="update"><span class="status-tag draft">Draft</span><span class="meta">Campaign reflection</span><h3>Leadership without performance</h3><p>Thoughts on listening, humility, responsibility, and the steady work required to rebuild public trust.</p></article>
+        <article class="update"><span class="status-tag ready">Published project</span><span class="meta">Community work</span><h3>River to Road: service before slogans</h3><p>A community cleanup and restoration pathway focused on visible environmental stewardship.</p><a class="btn btn-outline" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener noreferrer">Visit River to Road</a></article>
       </div>
     </div>
   </div>
@@ -897,31 +1226,57 @@ body{
       <div>
         <p class="eyebrow">Join the movement</p>
         <h2>Help build a campaign rooted in service, dignity, and renewal.</h2>
-        <p>Volunteer, share your ideas, attend an event, support local service projects, or receive campaign updates as the national platform grows.</p>
-        <form class="form" id="form">
-          <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-          <button class="btn btn-red" type="submit">Receive Updates</button>
-        </form>
+        <p>Read the platform, share the campaign, participate in public-service projects, and return as official volunteer, event, and email systems are connected.</p>
+        <div class="join-status" role="status">
+          The current static page does not transmit email addresses, accept contributions, register volunteers, or reserve event attendance. These actions remain visibly unavailable until secure campaign services are connected.
+        </div>
       </div>
       <div class="join-actions">
-        <a class="btn btn-red" href="#">Volunteer</a>
-        <a class="btn btn-outline" href="#">Attend an Event</a>
-        <a class="btn btn-outline" href="#">Share the Campaign</a>
-        <a class="btn btn-outline" href="#">Support the Mission</a>
+        <a class="btn btn-red" href="https://vervenveda.github.io/onenationforall.github.io/apps/National_Policy_Proposals_index.html" target="_blank" rel="noopener noreferrer">Read Policy Proposals</a>
+        <a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">Explore Civic Resources</a>
+        <button class="btn btn-outline" id="shareCampaign" type="button">Share the Campaign</button>
+        <button class="btn btn-outline" type="button" disabled aria-disabled="true">Volunteer Portal Coming Soon</button>
+        <button class="btn btn-outline" type="button" disabled aria-disabled="true">Events Calendar Coming Soon</button>
+        <button class="btn btn-outline" type="button" disabled aria-disabled="true">Secure Updates Signup Coming Soon</button>
+        <p class="share-status" id="shareStatus" aria-live="polite"></p>
       </div>
     </div>
   </div>
 </section>
+<section class="section alt" id="information">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">Campaign information</p>
+      <h2>Accessibility, privacy,<span class="section-heading-break">contact, and disclosures.</span></h2>
+      <p class="lede">A trustworthy campaign page should explain what it does, what it does not collect, and where visitors can find authoritative election information.</p>
+    </div>
+    <div class="information-grid">
+      <article class="information-card" id="accessibility"><span class="status-tag ready">Available</span><h3>Accessibility</h3><p>Keyboard navigation, visible focus styles, responsive layouts, reduced-motion support, descriptive image text, and readable contrast are built into this page.</p><a href="#top">Return to page top</a></article>
+      <article class="information-card" id="privacy"><span class="status-tag ready">Current page</span><h3>Privacy</h3><p>This static page does not currently transmit signup data, process donations, run analytics, or create campaign accounts. Gallery files load from the same site.</p><a href="#gallery">Review gallery behavior</a></article>
+      <article class="information-card" id="contact"><span class="status-tag draft">Connection pending</span><h3>Contact</h3><p>A secure public campaign contact method has not been supplied in this file. The page does not invent or expose a private address.</p><a href="https://www.vervenveda.com/" target="_blank" rel="noopener noreferrer">Current public campaign presence</a></article>
+      <article class="information-card" id="disclosures"><span class="status-tag ready">Official guidance</span><h3>Campaign Disclosures</h3><p>The visible paid-for notice should use the exact legal name of the authorized committee. Federal rules and candidate filings are maintained by the FEC.</p><a href="https://www.fec.gov/help-candidates-and-committees/advertising-and-disclaimers/" target="_blank" rel="noopener noreferrer">Read FEC guidance</a></article>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
   <div class="shell footer-grid">
-    <div><h3>Jennifer Pearl 2028</h3><p>A campaign for transparent government, national renewal, practical solutions, stronger communities, and a future built together.</p></div>
-    <div><h3>Campaign</h3><div class="footer-links"><a href="#about">Meet Jennifer</a><a href="#priorities">Policy Priorities</a><a href="#gallery">Campaign Gallery</a><a href="#updates">News and Updates</a><a href="#join">Volunteer</a></div></div>
-    <div><h3>Public Network</h3><div class="footer-links"><a href="#">One Nation For All</a><a href="#">Verve N Veda</a><a href="#">PLERA Search</a><a href="#">The Verifier</a></div></div>
-    <div><h3>Information</h3><div class="footer-links"><a href="#">Accessibility</a><a href="#">Privacy</a><a href="#">Contact</a><a href="#">Campaign Disclosures</a></div></div>
+    <div><h3>Jennifer Pearl 2028</h3><p>A campaign for transparent government, national renewal, practical solutions, stronger communities, and a future built together.</p><p class="no-government">Campaign website · Not a government website</p></div>
+    <div><h3>Campaign</h3><div class="footer-links"><a href="#about">Meet Jennifer</a><a href="#priorities">Policy Priorities</a><a href="#gallery">Campaign Gallery</a><a href="#updates">Campaign Journal</a><a href="#join">Participate</a></div></div>
+    <div><h3>Public Network</h3><div class="footer-links"><a href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">One Nation For All</a><a href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Verve N Veda</a><a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener noreferrer">PLERA Search</a><a href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer">The Verifier</a></div></div>
+    <div><h3>Information</h3><div class="footer-links"><a href="#accessibility">Accessibility</a><a href="#privacy">Privacy</a><a href="#contact">Contact</a><a href="#disclosures">Campaign Disclosures</a></div></div>
   </div>
-  <div class="shell bottom"><span>© 2028 Jennifer Pearl 2028. All rights reserved.</span><span>Paid for by Jennifer Pearl 2028.</span></div>
+  <div class="disclaimer-wrap">
+    <div class="shell">
+      <div class="campaign-disclaimer">
+        <strong>Paid for by Jennifer Pearl 2028.</strong>
+        <span>This static page does not currently accept contributions or transmit signup, volunteer, or event-registration information. Review the <a href="https://www.fec.gov/help-candidates-and-committees/advertising-and-disclaimers/" target="_blank" rel="noopener noreferrer">Federal Election Commission’s disclaimer guidance</a> and confirm the committee’s exact legal name before public launch.</span>
+      </div>
+    </div>
+  </div>
+  <div class="shell bottom"><span>© <span id="currentYear">2026</span> Jennifer Pearl 2028. All rights reserved.</span><span>Campaign information and public-service resources.</span></div>
 </footer>
 
 <script>
@@ -929,7 +1284,6 @@ body{
   "use strict";
   const menu=document.getElementById("menu");
   const mobile=document.getElementById("mobile");
-  const form=document.getElementById("form");
 
   function closeMenu(){
     mobile.classList.remove("open");
@@ -950,7 +1304,21 @@ body{
   });
 
   document.addEventListener("keydown",function(event){
-    if(event.key==="Escape")closeMenu();
+    if(event.key==="Escape"){
+      const wasOpen=mobile.classList.contains("open");
+      closeMenu();
+      if(wasOpen)menu.focus();
+    }
+  });
+
+  document.addEventListener("click",function(event){
+    if(!mobile.classList.contains("open"))return;
+    if(mobile.contains(event.target) || menu.contains(event.target))return;
+    closeMenu();
+  });
+
+  window.addEventListener("resize",function(){
+    if(window.innerWidth>1000)closeMenu();
   });
 
 
@@ -967,6 +1335,20 @@ body{
   const galleryRefresh=document.getElementById("galleryRefresh");
 
   const GALLERY_MANIFEST_URL="data/campaign-gallery.json";
+  const FALLBACK_GALLERY=[
+    {
+      file:"assets/campaign-gallery/003-campaign-portrait.webp",
+      caption:"Jennifer Pearl 2028 campaign portrait",
+      alt:"Black-and-white campaign portrait of Jennifer Pearl with stars in the background",
+      order:1
+    },
+    {
+      file:"assets/campaign-gallery/005-candidate-photo.webp",
+      caption:"Jennifer Pearl — artist, mother, builder, and citizen",
+      alt:"Black-and-white outdoor portrait of Jennifer Pearl wearing a dark coat and white collared shirt",
+      order:2
+    }
+  ];
 
   let galleryItems=[];
   let galleryIndex=0;
@@ -1122,16 +1504,14 @@ body{
             : " published campaign images.");
       }
     }catch(error){
-      console.error("Published gallery could not be loaded.",error);
-      galleryItems=[];
+      console.warn("Published gallery manifest could not be loaded; using embedded fallback entries.",error);
+      galleryItems=FALLBACK_GALLERY.slice();
+      galleryIndex=0;
       renderGalleryThumbs();
       showGallery(0);
-      galleryEmpty.innerHTML=
-        "<strong>The gallery could not be loaded.</strong>" +
-        "<span>Confirm that data/campaign-gallery.json and the referenced " +
-        "files are in the repository, then refresh this page.</span>";
       galleryStatus.textContent=
-        "Published gallery unavailable: " + error.message;
+        "Gallery manifest unavailable. Showing " + galleryItems.length +
+        " embedded campaign image references.";
     }
   }
 
@@ -1169,11 +1549,95 @@ body{
 
   loadPublishedGallery();
 
-  form.addEventListener("submit",function(event){
-    event.preventDefault();
-    alert("Thank you for joining Jennifer Pearl 2028. This first-draft form is not yet connected to a mailing service.");
-    form.reset();
-  });
+  const shareCampaign=document.getElementById("shareCampaign");
+  const shareStatus=document.getElementById("shareStatus");
+  const currentYear=document.getElementById("currentYear");
+
+  if(currentYear)currentYear.textContent=String(new Date().getFullYear());
+
+  function replaceBrokenPortrait(image,label,detail){
+    if(!image)return;
+    image.addEventListener("error",function(){
+      const fallback=document.createElement("div");
+      fallback.className="image-fallback";
+      fallback.innerHTML="<div><strong>"+label+"</strong><span>"+detail+"</span></div>";
+      image.replaceWith(fallback);
+    },{once:true});
+  }
+
+  replaceBrokenPortrait(
+    document.getElementById("heroPortrait"),
+    "Campaign portrait",
+    "Upload assets/campaign-gallery/003-campaign-portrait.webp with this page."
+  );
+  replaceBrokenPortrait(
+    document.getElementById("bioPortrait"),
+    "Candidate photograph",
+    "Upload assets/campaign-gallery/005-candidate-photo.webp with this page."
+  );
+
+  if(shareCampaign){
+    shareCampaign.addEventListener("click",async function(){
+      const shareData={
+        title:"Jennifer Pearl 2028",
+        text:"Jennifer Pearl 2028 — a future built together.",
+        url:window.location.href
+      };
+      try{
+        if(navigator.share){
+          await navigator.share(shareData);
+          shareStatus.textContent="Campaign share menu opened.";
+        }else if(navigator.clipboard && window.isSecureContext){
+          await navigator.clipboard.writeText(window.location.href);
+          shareStatus.textContent="Campaign link copied to your clipboard.";
+        }else{
+          shareStatus.textContent="Copy this page address from your browser to share the campaign.";
+        }
+      }catch(error){
+        if(error && error.name==="AbortError"){
+          shareStatus.textContent="Share canceled.";
+        }else{
+          shareStatus.textContent="The share action was unavailable. Copy the page address from your browser.";
+        }
+      }
+    });
+  }
+
+  function auditCampaignPage(){
+    const ids=[...document.querySelectorAll("[id]")].map(function(node){return node.id;});
+    const duplicates=ids.filter(function(id,index){return ids.indexOf(id)!==index;});
+    const blankLinks=[...document.querySelectorAll("a[href]")].filter(function(link){
+      const href=link.getAttribute("href");
+      return !href || href==="#";
+    });
+    const missingFragments=[...document.querySelectorAll('a[href^="#"]')].filter(function(link){
+      const href=link.getAttribute("href");
+      return href.length>1 && !document.querySelector(href);
+    });
+    const result={
+      duplicateIds:[...new Set(duplicates)],
+      blankLinks:blankLinks.length,
+      missingFragmentTargets:missingFragments.map(function(link){return link.getAttribute("href");}),
+      policyCards:document.querySelectorAll(".policy").length,
+      publicGateways:document.querySelectorAll(".gateway-card").length,
+      publicRecordDestinations:document.querySelectorAll(".record").length,
+      informationCards:document.querySelectorAll(".information-card").length
+    };
+    if(result.duplicateIds.length || result.blankLinks || result.missingFragmentTargets.length){
+      console.warn("Jennifer Pearl 2028 page audit found issues.",result);
+    }else{
+      console.info(
+        "Jennifer Pearl 2028 page audit passed: " +
+        result.policyCards + " priorities, " +
+        result.publicGateways + " public gateways, " +
+        result.publicRecordDestinations + " public-service destinations."
+      );
+    }
+    return result;
+  }
+
+  window.auditJenniferPearl2028=auditCampaignPage;
+  auditCampaignPage();
 })();
 </script>
 </body>
