@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Jennifer Pearl 2028 — transparent government, national renewal, stronger communities, and a future built together.">
+<meta name="description" content="Jennifer Pearl 2028 — a connected public-service mission linking constitutional learning, voter access, legal help, veterans, homelessness, health, education, environment, independent information, and stronger communities.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'self'; media-src 'self'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="robots" content="index,follow">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#0b1f33">
@@ -933,6 +936,154 @@ button.btn{font-family:inherit}
   .join{grid-template-columns:1fr}
 }
 
+
+
+/* ==========================================================
+   CONNECTED SOCIETY MISSION
+   ========================================================== */
+.mission-section{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 8% 12%,rgba(141,48,54,.08),transparent 26rem),
+    radial-gradient(circle at 92% 88%,rgba(11,31,51,.09),transparent 28rem),
+    linear-gradient(180deg,#f7f3ec,#eee8df);
+  border-block:1px solid var(--line);
+}
+.mission-section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(90deg,transparent 0 79px,rgba(11,31,51,.022) 80px);
+}
+.mission-section .shell{position:relative;z-index:1}
+.mission-intro{
+  max-width:900px;
+  margin:0 auto 2rem;
+  padding:1.15rem 1.25rem;
+  border:1px solid #d8c8aa;
+  border-left:4px solid var(--red);
+  border-radius:7px;
+  color:var(--navy);
+  background:rgba(255,253,249,.8);
+  text-align:center;
+  box-shadow:0 10px 28px rgba(11,31,51,.055);
+}
+.mission-intro strong{display:block;font:400 1.25rem var(--serif)}
+.mission-intro span{display:block;margin-top:.45rem;color:var(--muted);font-size:.86rem;line-height:1.7}
+.mission-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1rem;
+  align-items:stretch;
+}
+.mission-card{
+  min-height:280px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:1.5rem;
+  border:1px solid var(--line);
+  border-top:4px solid var(--navy);
+  border-radius:7px;
+  color:var(--ink);
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  text-align:center;
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.mission-card:nth-child(3n+2){border-top-color:var(--red)}
+.mission-card:nth-child(3n){border-top-color:var(--gold)}
+.mission-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 22px 50px rgba(11,31,51,.14)}
+.mission-symbol{
+  width:50px;height:50px;display:grid;place-items:center;
+  border-radius:7px;color:white;background:var(--navy);
+  font:600 .88rem var(--serif);letter-spacing:.03em;
+}
+.mission-card:nth-child(3n+2) .mission-symbol{background:var(--red)}
+.mission-card:nth-child(3n) .mission-symbol{color:var(--navy);background:#dfcfb0}
+.mission-card h3{margin-top:1rem;color:var(--navy);font-size:1.25rem}
+.mission-card p{flex:1;max-width:320px;margin:.75rem auto 1.15rem;color:var(--muted);font-size:.84rem;line-height:1.67}
+.mission-card .btn{width:100%;margin-top:auto}
+.mission-source{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:25px;margin-top:.8rem;padding:.25rem .5rem;
+  border:1px solid var(--line);border-radius:999px;color:var(--muted);
+  background:#f3eee5;font-size:.6rem;letter-spacing:.075em;text-transform:uppercase;
+}
+.mission-images{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1.25rem;
+}
+.mission-figure{
+  min-height:300px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  margin:0;
+  border:1px solid var(--line);
+  border-radius:7px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+}
+.mission-figure-media{
+  min-height:235px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:linear-gradient(135deg,#d8d2c8,#f5f1e9);
+}
+.mission-figure img{width:100%;height:235px;display:block;object-fit:cover}
+.mission-figure figcaption{padding:1rem 1.1rem;color:var(--muted);font-size:.78rem;line-height:1.55}
+.mission-figure figcaption strong{display:block;color:var(--navy);font:400 1rem var(--serif)}
+.asset-placeholder{
+  width:100%;min-height:235px;display:grid;place-items:center;padding:1.5rem;
+  color:var(--muted);background:linear-gradient(135deg,#e2ddd4,#f7f3ec);text-align:center;
+}
+.asset-placeholder strong{display:block;color:var(--navy);font:400 1.15rem var(--serif)}
+.asset-placeholder span{display:block;max-width:270px;margin-top:.45rem;font-size:.72rem;line-height:1.55}
+
+.official-help-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1rem;
+}
+.official-help-card{
+  min-height:270px;display:flex;flex-direction:column;align-items:center;
+  padding:1.45rem;border:1px solid var(--line);border-radius:7px;
+  background:var(--surface);box-shadow:0 10px 26px rgba(11,31,51,.065);text-align:center;
+}
+.official-help-card h3{margin-top:1rem;color:var(--navy)}
+.official-help-card p{flex:1;margin:.75rem 0 1rem;color:var(--muted);font-size:.83rem;line-height:1.65}
+.official-help-card .btn{width:100%;margin-top:auto}
+.official-label{margin-top:.75rem;color:var(--gold);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase}
+
+.original-site-card{
+  max-width:900px;margin:1.5rem auto 0;padding:1.6rem;
+  border:1px solid #d2b77f;border-left:4px solid var(--gold);border-radius:7px;
+  color:var(--ink);background:#fffaf1;box-shadow:var(--shadow);text-align:center;
+}
+.original-site-card h3{color:var(--navy);font-size:1.45rem}
+.original-site-card p{max-width:700px;margin:.75rem auto 1rem;color:var(--muted);font-size:.86rem}
+.original-site-card .btn{min-width:min(100%,310px)}
+.wix-exception-note{display:block;margin-top:.75rem;color:#7b6850;font-size:.68rem;letter-spacing:.045em}
+
+@media(max-width:1050px){
+  .mission-grid,.official-help-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:820px){
+  .mission-grid,.official-help-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mission-images{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .mission-grid,.official-help-grid{grid-template-columns:1fr}
+  .mission-card,.official-help-card{min-height:0}
+}
+
 </style>
 </head>
 <body>
@@ -947,7 +1098,7 @@ button.btn{font-family:inherit}
     <nav class="links" aria-label="Primary navigation">
       <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
       <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
-      <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join</a>
+      <a href="#ecosystem">Ecosystem</a><a href="#gallery">Gallery</a><a href="#join">Join</a>
     </nav>
     <button class="menu" id="menu" aria-expanded="false" aria-controls="mobile" aria-label="Open navigation">☰</button>
   </div>
@@ -964,7 +1115,7 @@ button.btn{font-family:inherit}
 <nav class="mobile" id="mobile" aria-label="Mobile navigation">
   <a href="#vision">Vision</a><a href="#priorities">Priorities</a>
   <a href="#record">Record</a><a href="#about">Meet Jennifer</a>
-  <a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join the Movement</a>
+  <a href="#ecosystem">Connected Mission</a><a href="#gallery">Gallery</a><a href="#updates">Updates</a><a href="#join">Join the Movement</a>
 </nav>
 
 <main id="main">
@@ -977,9 +1128,9 @@ button.btn{font-family:inherit}
       <div class="actions">
         <a class="btn btn-light" href="#about">Meet Jennifer</a>
         <a class="btn btn-ghost" href="#priorities">Explore the Vision</a>
-        <a class="btn btn-ghost" href="#join">Join the Movement</a>
+        <a class="btn btn-ghost" href="#ecosystem">See the Connected Mission</a>
       </div>
-      <p class="note">Jennifer Pearl 2028 campaign platform, public resources, and repository-managed campaign gallery. This campaign page is separate from government agencies and official election administration.</p>
+      <p class="note">Jennifer Pearl 2028 campaign platform and connected public-service ecosystem. Campaign materials remain separate from government agencies, official election administration, and independent public resources.</p>
     </div>
     <div class="portrait">
       <img
@@ -1034,57 +1185,73 @@ button.btn{font-family:inherit}
 </section>
 
 
+
+<section class="section mission-section" id="ecosystem">
+  <div class="shell">
+    <div class="heading">
+      <p class="eyebrow">One mission · connected society</p>
+      <h2>Public service should not live in isolated rooms.</h2>
+      <p class="lede">The Verve N Veda ecosystem links civic learning, constitutional understanding, voter access, legal organization, veterans, homelessness, health, education, environment, research, and professional tools so people can move from a question to a useful next doorway.</p>
+    </div>
+
+    <div class="mission-intro">
+      <strong>A visible public-service architecture</strong>
+      <span>This network is part of Jennifer Pearl’s mission: connect knowledge to action, connect specialized halls to one another, and help people find a next step without requiring them to understand an entire institution first.</span>
+    </div>
+
+    <div class="mission-grid">
+      <article class="mission-card"><span class="mission-symbol">US</span><h3>Constitutional Hall</h3><p>Explore the Constitution, amendments, branches, landmark cases, civic scenarios, quizzes, and primary-source verification.</p><a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/apps/we_the_people_2_index.html" target="_blank" rel="noopener noreferrer">Enter Constitutional Hall</a><span class="mission-source">One Nation For All · Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">1N</span><h3>One Nation For All</h3><p>The central civic gateway connecting voter participation, government, public policy, constitutional learning, community support, and public action.</p><a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">Open Civic Gateway</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">VOTE</span><h3>United States Voter Hub</h3><p>Choose a state or territory and move toward official registration, voter-status, election-office, and voting-information resources.</p><a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/apps/US_VOTER_HUB_index.html" target="_blank" rel="noopener noreferrer">Open Voter Hub</a><span class="mission-source">One Nation For All · Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">JP</span><h3>Jennifer Pearl Editorials</h3><p>Read the editorial columns inside The Verifier, where public questions are connected to evidence, context, independent research, and civic reflection.</p><a class="btn btn-outline" href="https://vervenveda.github.io/theverifier.github.io/#columns" target="_blank" rel="noopener noreferrer">Open Editorial Desk</a><span class="mission-source">The Verifier · Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">§</span><h3>Firmament Law</h3><p>Legal-information tools, evidence organization, rights resources, family and housing pathways, official legal sources, and public-support halls.</p><a class="btn btn-outline" href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener noreferrer">Enter Firmament Law</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">★</span><h3>National Veterans Portal</h3><p>A veteran-centered doorway for benefits, housing, health, records, employment, families, crisis support, and official assistance.</p><a class="btn btn-outline" href="https://vervenveda.github.io/firmament.github.io/apps/Veterans_Hub_National_index.html" target="_blank" rel="noopener noreferrer">Open Veterans Portal</a><span class="mission-source">Firmament · Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">1D</span><h3>Homeless Resource Hub</h3><p>A practical pathway for shelter, housing, food, documents, benefits, health, employment, safety, and local assistance.</p><a class="btn btn-outline" href="https://vervenveda.github.io/firmament.github.io/apps/Homeless_Hub_index.html" target="_blank" rel="noopener noreferrer">Open Homeless Hub</a><span class="mission-source">Firmament · Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">+</span><h3>Medicament Hub</h3><p>Whole-person health education, insurance navigation, caregiver support, medical learning halls, seniors, and public-health resources.</p><a class="btn btn-outline" href="https://vervenveda.github.io/medicament-hub.github.io/" target="_blank" rel="noopener noreferrer">Open Health Gateway</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">KA</span><h3>Khaemenes Academy</h3><p>Free learning pathways from early childhood through higher learning, careers, finance, civics, arts, research, and lifelong education.</p><a class="btn btn-outline" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer">Enter the Academy</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">R2R</span><h3>River to Road</h3><p>Environmental stewardship, public cleanup, citizen science, restoration, environmental news, learning, and community action.</p><a class="btn btn-outline" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener noreferrer">Open River to Road</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">PR</span><h3>ProReSources</h3><p>Professional writing, résumé and letter preparation, evidence and citation tools, task planning, archive protection, and practical workspaces.</p><a class="btn btn-outline" href="https://vervenveda.github.io/proresource_hub.github.io/" target="_blank" rel="noopener noreferrer">Open Professional Tools</a><span class="mission-source">Verve N Veda original</span></article>
+      <article class="mission-card"><span class="mission-symbol">⌕</span><h3>PLERA Search</h3><p>A visible research gateway into public records, learning, maps, law, science, resources, and the connected Verve N Veda network.</p><a class="btn btn-outline" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener noreferrer">Open Research Gateway</a><span class="mission-source">Verve N Veda original</span></article>
+    </div>
+
+    <div class="mission-images" aria-label="Repository campaign and service image placements">
+      <figure class="mission-figure"><div class="mission-figure-media"><img class="repository-asset" src="assets/campaign-gallery/001-river-to-road.webp" alt="River to Road community environmental service"></div><figcaption><strong>Service before slogans</strong>River to Road represents the campaign’s belief that public leadership begins with visible care for neighborhoods and the environment.</figcaption></figure>
+      <figure class="mission-figure"><div class="mission-figure-media"><img class="repository-asset" src="assets/campaign-gallery/002-Jennifer_Pearl_President.webp" alt="Jennifer Pearl for President campaign artwork"></div><figcaption><strong>The public campaign</strong>A dedicated placement for the repository’s presidential campaign artwork and official visual identity.</figcaption></figure>
+      <figure class="mission-figure"><div class="mission-figure-media"><img class="repository-asset" src="assets/campaign-gallery/004-burrowing-owl.webp" alt="Burrowing owl representing environmental and wildlife stewardship"></div><figcaption><strong>Protecting living communities</strong>The burrowing owl image belongs beside the environmental mission: wildlife, land, water, and responsible development.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="public-resources">
   <div class="shell">
     <div class="heading">
-      <p class="eyebrow">Read, learn, and participate</p>
-      <h2>Campaign context.<span class="section-heading-break">Independent civic information.</span></h2>
-      <p class="lede">Campaign materials are presented separately from official election administration. Use the government gateways below for authoritative voter and federal-election information.</p>
+      <p class="eyebrow">Official civic and public-help gateways</p>
+      <h2>Original tools and official sources have different roles.</h2>
+      <p class="lede">The Verve N Veda ecosystem helps visitors understand, organize, and navigate. The official and institutionally authoritative destinations below remain the source for registration, government records, legal-aid locations, and federal assistance.</p>
     </div>
 
     <div class="campaign-boundary">
-      <strong>Campaign and civic resources are not the same thing.</strong>
-      <span>Jennifer Pearl 2028 presents the candidate’s platform and public record. Vote.gov, the Federal Election Commission, and USA.gov remain the authoritative starting points for registration, federal campaign-finance information, and official election guidance.</span>
+      <strong>Campaign, original public tools, and government sources are clearly separated.</strong>
+      <span>Jennifer Pearl 2028 presents the candidate’s mission and public-service record. Verve N Veda applications are independently created navigation and learning tools. Government and institutional gateways remain authoritative for official records, registration, eligibility, filings, and services.</span>
     </div>
 
-    <div class="gateway-grid">
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">JP</span>
-        <h3>Jennifer Pearl Editorials</h3>
-        <p>Read Jennifer’s published commentary, public reflections, and long-form editorial work inside The Verifier.</p>
-        <a class="btn btn-outline" href="https://vervenveda.github.io/theverifier.github.io/#columns" target="_blank" rel="noopener noreferrer">Open the Editorial Desk</a>
-      </article>
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">1N</span>
-        <h3>One Nation For All</h3>
-        <p>Explore civic learning, voter education, constitutional study, public policy, veterans resources, and community pathways.</p>
-        <a class="btn btn-outline" href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">Enter the Civic Gateway</a>
-      </article>
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">V</span>
-        <h3>Vote.gov</h3>
-        <p>Use the official federal starting point for voter registration guidance in your state or territory.</p>
-        <a class="btn btn-outline" href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Open Vote.gov</a>
-      </article>
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">FEC</span>
-        <h3>Federal Election Commission</h3>
-        <p>Review official federal candidate, committee, filing, disclosure, and campaign-finance information.</p>
-        <a class="btn btn-outline" href="https://www.fec.gov/data/candidates/" target="_blank" rel="noopener noreferrer">Browse FEC Candidate Data</a>
-      </article>
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">US</span>
-        <h3>USA.gov Elections</h3>
-        <p>Find official election, voting, state-office, and public-government information from the United States government.</p>
-        <a class="btn btn-outline" href="https://www.usa.gov/voting-and-elections" target="_blank" rel="noopener noreferrer">Open USA.gov</a>
-      </article>
-      <article class="gateway-card">
-        <span class="gateway-icon" aria-hidden="true">VNV</span>
-        <h3>Verve N Veda</h3>
-        <p>Visit the wider public network connecting education, research, health, law, environment, culture, and community tools.</p>
-        <a class="btn btn-outline" href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Explore the Public Network</a>
-      </article>
+    <div class="official-help-grid">
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">DOC</span><div class="official-label">Official constitutional source</div><h3>National Archives Founding Documents</h3><p>Read the Constitution, Declaration of Independence, Bill of Rights, transcripts, and related historical records.</p><a class="btn btn-outline" href="https://www.archives.gov/founding-docs" target="_blank" rel="noopener noreferrer">Read Founding Documents</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">V</span><div class="official-label">Official voter registration</div><h3>Vote.gov</h3><p>Register to vote or update registration by selecting your state or territory, and review voter rights and voting guidance.</p><a class="btn btn-outline" href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Open Vote.gov</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">FEC</span><div class="official-label">Official federal election records</div><h3>Federal Election Commission</h3><p>Review federal candidate, committee, filing, disclosure, campaign-finance, compliance, and legal-resource information.</p><a class="btn btn-outline" href="https://www.fec.gov/data/candidates/" target="_blank" rel="noopener noreferrer">Browse FEC Candidate Data</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">LAW</span><div class="official-label">Official government guide</div><h3>USA.gov Legal Aid</h3><p>Find programs offering free legal advice, pro bono services, low-cost attorneys, housing-law help, and group-specific resources.</p><a class="btn btn-outline" href="https://www.usa.gov/legal-aid" target="_blank" rel="noopener noreferrer">Find Legal Help</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">LSC</span><div class="official-label">Civil legal-aid network</div><h3>Legal Services Corporation</h3><p>Search for an LSC-funded civil legal-aid organization serving low-income residents in your community.</p><a class="btn btn-outline" href="https://www.lsc.gov/about-lsc/what-legal-aid/i-need-legal-help" target="_blank" rel="noopener noreferrer">Locate Legal Aid</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">HUD</span><div class="official-label">Official housing resource</div><h3>HUD Find Shelter</h3><p>Search by location for shelter, food pantries, health clinics, clothing resources, and local homelessness assistance.</p><a class="btn btn-outline" href="https://www.hud.gov/FindShelter" target="_blank" rel="noopener noreferrer">Find Local Help</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">VA</span><div class="official-label">Official veteran assistance</div><h3>Homeless Veterans Support</h3><p>Reach the VA’s free, confidential, 24/7 pathway for Veterans who are homeless or at risk of losing stable housing.</p><a class="btn btn-outline" href="https://www.va.gov/homeless/nationalcallcenter.asp" target="_blank" rel="noopener noreferrer">Open VA Support</a></article>
+      <article class="official-help-card"><span class="gateway-icon" aria-hidden="true">US</span><div class="official-label">Official election guidance</div><h3>USA.gov Voting and Elections</h3><p>Find official information about registration, state and local elections, voting methods, elected officials, and election questions.</p><a class="btn btn-outline" href="https://www.usa.gov/voting-and-elections" target="_blank" rel="noopener noreferrer">Open USA.gov</a></article>
     </div>
+
+    <article class="original-site-card" id="original-candidacy">
+      <h3>Original Candidacy Site</h3>
+      <p>This is the single approved Wix destination in the Verve N Veda public ecosystem. It preserves Jennifer Pearl’s original candidacy website and earlier public campaign presentation.</p>
+      <a class="btn btn-red" href="https://vervneveda.wixsite.com/home" target="_blank" rel="noopener noreferrer">Visit the Original Candidacy Site ↗</a>
+      <span class="wix-exception-note">Approved Wix exception · No other Wix destination is authorized on this page.</span>
+    </article>
   </div>
 </section>
 
@@ -1092,8 +1259,8 @@ button.btn{font-family:inherit}
   <div class="shell">
     <div class="heading">
       <p class="eyebrow">A record of building</p>
-      <h2>Public-service work<span class="section-heading-break">already underway.</span></h2>
-      <p class="lede">The campaign is grounded in an expanding network of free public resources, educational spaces, civic tools, environmental projects, and community-centered platforms.</p>
+      <h2>A connected public-service ecosystem<span class="section-heading-break">already underway.</span></h2>
+      <p class="lede">The campaign is grounded in a living network of free public resources that connect civic learning, law, health, education, environment, information, professional tools, veterans, homelessness, and practical community support.</p>
     </div>
     <div class="record-grid">
       <article class="record"><span class="icon">V</span><h3>Verve N Veda</h3><p>A public gateway connecting education, research, culture, community resources, and civic tools.</p><a class="record-link" href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Visit gateway ↗</a></article>
@@ -1101,6 +1268,8 @@ button.btn{font-family:inherit}
       <article class="record"><span class="icon">KA</span><h3>Khaemenes Academy</h3><p>A free educational network supporting learners, families, educators, and lifelong curiosity.</p><a class="record-link" href="https://vervenveda.github.io/Khaemenes_Academy.github.io/" target="_blank" rel="noopener noreferrer">Visit academy ↗</a></article>
       <article class="record"><span class="icon">R</span><h3>River to Road</h3><p>Community environmental action focused on neighborhood cleanup, stewardship, and restoration.</p><a class="record-link" href="https://vervenveda.github.io/river_to_road.github.io/" target="_blank" rel="noopener noreferrer">Visit project ↗</a></article>
       <article class="record"><span class="icon">F</span><h3>Firmament Law</h3><p>Public legal education, rights resources, practical guides, and understandable civic information.</p><a class="record-link" href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener noreferrer">Visit legal hub ↗</a></article>
+<article class="record"><span class="icon">★</span><h3>Veterans Portal</h3><p>Benefits, housing, health, records, employment, families, crisis support, and official veteran-service pathways.</p><a class="record-link" href="https://vervenveda.github.io/firmament.github.io/apps/Veterans_Hub_National_index.html" target="_blank" rel="noopener noreferrer">Visit veterans portal ↗</a></article>
+<article class="record"><span class="icon">1D</span><h3>Homeless Resource Hub</h3><p>Shelter, housing, food, documents, benefits, health, safety, employment, and coordinated assistance pathways.</p><a class="record-link" href="https://vervenveda.github.io/firmament.github.io/apps/Homeless_Hub_index.html" target="_blank" rel="noopener noreferrer">Visit homeless hub ↗</a></article>
       <article class="record"><span class="icon">M</span><h3>Medicament Hub</h3><p>Whole-person health education, family support, medical resources, and accessible public guidance.</p><a class="record-link" href="https://vervenveda.github.io/medicament-hub.github.io/" target="_blank" rel="noopener noreferrer">Visit health hub ↗</a></article>
       <article class="record"><span class="icon">V</span><h3>The Verifier</h3><p>Independent news discovery, source comparison, research tools, education, and public-interest information.</p><a class="record-link" href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer">Visit newsroom ↗</a></article>
       <article class="record"><span class="icon">⌕</span><h3>PLERA Search</h3><p>A sovereign gateway into trusted resources, public directories, and connected knowledge.</p><a class="record-link" href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener noreferrer">Open search ↗</a></article>
@@ -1253,7 +1422,7 @@ button.btn{font-family:inherit}
     <div class="information-grid">
       <article class="information-card" id="accessibility"><span class="status-tag ready">Available</span><h3>Accessibility</h3><p>Keyboard navigation, visible focus styles, responsive layouts, reduced-motion support, descriptive image text, and readable contrast are built into this page.</p><a href="#top">Return to page top</a></article>
       <article class="information-card" id="privacy"><span class="status-tag ready">Current page</span><h3>Privacy</h3><p>This static page does not currently transmit signup data, process donations, run analytics, or create campaign accounts. Gallery files load from the same site.</p><a href="#gallery">Review gallery behavior</a></article>
-      <article class="information-card" id="contact"><span class="status-tag draft">Connection pending</span><h3>Contact</h3><p>A secure public campaign contact method has not been supplied in this file. The page does not invent or expose a private address.</p><a href="https://www.vervenveda.com/" target="_blank" rel="noopener noreferrer">Current public campaign presence</a></article>
+      <article class="information-card" id="contact"><span class="status-tag draft">Connection pending</span><h3>Contact</h3><p>A secure public campaign contact method has not been supplied in this file. The page does not invent or expose a private address.</p><a href="#original-candidacy">View campaign history doorway</a></article>
       <article class="information-card" id="disclosures"><span class="status-tag ready">Official guidance</span><h3>Campaign Disclosures</h3><p>The visible paid-for notice should use the exact legal name of the authorized committee. Federal rules and candidate filings are maintained by the FEC.</p><a href="https://www.fec.gov/help-candidates-and-committees/advertising-and-disclaimers/" target="_blank" rel="noopener noreferrer">Read FEC guidance</a></article>
     </div>
   </div>
@@ -1265,7 +1434,7 @@ button.btn{font-family:inherit}
   <div class="shell footer-grid">
     <div><h3>Jennifer Pearl 2028</h3><p>A campaign for transparent government, national renewal, practical solutions, stronger communities, and a future built together.</p><p class="no-government">Campaign website · Not a government website</p></div>
     <div><h3>Campaign</h3><div class="footer-links"><a href="#about">Meet Jennifer</a><a href="#priorities">Policy Priorities</a><a href="#gallery">Campaign Gallery</a><a href="#updates">Campaign Journal</a><a href="#join">Participate</a></div></div>
-    <div><h3>Public Network</h3><div class="footer-links"><a href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">One Nation For All</a><a href="https://vervenveda.github.io/" target="_blank" rel="noopener noreferrer">Verve N Veda</a><a href="https://vervenveda.github.io/PLERASearch.github.io/" target="_blank" rel="noopener noreferrer">PLERA Search</a><a href="https://vervenveda.github.io/theverifier.github.io/" target="_blank" rel="noopener noreferrer">The Verifier</a></div></div>
+    <div><h3>Public Network</h3><div class="footer-links"><a href="#ecosystem">Connected Mission</a><a href="https://vervenveda.github.io/onenationforall.github.io/" target="_blank" rel="noopener noreferrer">One Nation For All</a><a href="https://vervenveda.github.io/firmament.github.io/" target="_blank" rel="noopener noreferrer">Firmament Law</a><a href="https://vervenveda.github.io/theverifier.github.io/#columns" target="_blank" rel="noopener noreferrer">Jennifer Pearl Editorials</a><a href="https://vervenveda.github.io/firmament.github.io/apps/Veterans_Hub_National_index.html" target="_blank" rel="noopener noreferrer">Veterans Portal</a><a href="https://vervenveda.github.io/firmament.github.io/apps/Homeless_Hub_index.html" target="_blank" rel="noopener noreferrer">Homeless Hub</a></div></div>
     <div><h3>Information</h3><div class="footer-links"><a href="#accessibility">Accessibility</a><a href="#privacy">Privacy</a><a href="#contact">Contact</a><a href="#disclosures">Campaign Disclosures</a></div></div>
   </div>
   <div class="disclaimer-wrap">
@@ -1543,8 +1712,12 @@ button.btn{font-family:inherit}
   galleryRefresh.addEventListener("click",loadPublishedGallery);
 
   galleryImage.addEventListener("error",function(){
-    galleryStatus.textContent=
-      "One gallery image could not be displayed. Check its repository filename.";
+    galleryImage.hidden=true;
+    galleryCaption.hidden=true;
+    galleryEmpty.hidden=false;
+    galleryEmpty.innerHTML="<strong>Campaign image asset needs repair.</strong><span>The repository path exists, but the file is not currently valid displayable image data.</span>";
+    galleryStatus.textContent="A campaign gallery asset could not be displayed. Replace the placeholder file with a valid image binary.";
+    stopGallery();
   });
 
   loadPublishedGallery();
@@ -1559,7 +1732,7 @@ button.btn{font-family:inherit}
     if(!image)return;
     image.addEventListener("error",function(){
       const fallback=document.createElement("div");
-      fallback.className="image-fallback";
+      fallback.className=image.classList.contains("repository-asset")?"asset-placeholder":"image-fallback";
       fallback.innerHTML="<div><strong>"+label+"</strong><span>"+detail+"</span></div>";
       image.replaceWith(fallback);
     },{once:true});
@@ -1568,13 +1741,22 @@ button.btn{font-family:inherit}
   replaceBrokenPortrait(
     document.getElementById("heroPortrait"),
     "Campaign portrait",
-    "Upload assets/campaign-gallery/003-campaign-portrait.webp with this page."
+    "Replace assets/campaign-gallery/003-campaign-portrait.webp with a valid WebP image file."
   );
   replaceBrokenPortrait(
     document.getElementById("bioPortrait"),
     "Candidate photograph",
-    "Upload assets/campaign-gallery/005-candidate-photo.webp with this page."
+    "Replace assets/campaign-gallery/005-candidate-photo.webp with a valid WebP image file."
   );
+
+  document.querySelectorAll(".repository-asset").forEach(function(image){
+    const name=image.getAttribute("src").split("/").pop();
+    replaceBrokenPortrait(
+      image,
+      "Repository image awaiting repair",
+      name+" currently needs to be replaced with real image data in the campaign repository."
+    );
+  });
 
   if(shareCampaign){
     shareCampaign.addEventListener("click",async function(){
@@ -1621,16 +1803,31 @@ button.btn{font-family:inherit}
       policyCards:document.querySelectorAll(".policy").length,
       publicGateways:document.querySelectorAll(".gateway-card").length,
       publicRecordDestinations:document.querySelectorAll(".record").length,
-      informationCards:document.querySelectorAll(".information-card").length
+      informationCards:document.querySelectorAll(".information-card").length,
+      missionCards:document.querySelectorAll(".mission-card").length,
+      officialHelpCards:document.querySelectorAll(".official-help-card").length,
+      repositoryImagePlacements:document.querySelectorAll(".repository-asset").length,
+      wixLinks:[...document.querySelectorAll('a[href*="wixsite.com"]')].map(function(link){return link.href;}),
+      disallowedWixLinks:(function(){
+        const approved=document.querySelector("#original-candidacy a[href]");
+        const approvedURL=approved?approved.href:"";
+        return [...document.querySelectorAll('a[href*="wixsite.com"]')]
+          .filter(function(link){return link.href!==approvedURL;})
+          .map(function(link){return link.href;});
+      })(),
+      directGithubLinks:[...document.querySelectorAll('a[href*="github.com"]')].map(function(link){return link.href;}),
+      legacyCustomDomainLinks:[...document.querySelectorAll('a[href*="vervenveda.com"],a[href*="jenniferpearl2028.com"]')].map(function(link){return link.href;})
     };
-    if(result.duplicateIds.length || result.blankLinks || result.missingFragmentTargets.length){
+    result.passed=!result.duplicateIds.length && !result.blankLinks && !result.missingFragmentTargets.length && result.wixLinks.length===1 && !result.disallowedWixLinks.length && !result.directGithubLinks.length && !result.legacyCustomDomainLinks.length;
+    if(!result.passed){
       console.warn("Jennifer Pearl 2028 page audit found issues.",result);
     }else{
       console.info(
         "Jennifer Pearl 2028 page audit passed: " +
         result.policyCards + " priorities, " +
         result.publicGateways + " public gateways, " +
-        result.publicRecordDestinations + " public-service destinations."
+        result.publicRecordDestinations + " public-service destinations, " +
+        result.missionCards + " connected mission doors, and one approved Wix exception."
       );
     }
     return result;
