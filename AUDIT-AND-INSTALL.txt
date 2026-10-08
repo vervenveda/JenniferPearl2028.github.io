@@ -1,0 +1,46 @@
+Jennifer Pearl 2028 gateway audit — October 8, 2026
+Repository: vervenveda/JenniferPearl2028.github.io
+Source main tree: 661b3d55205ec5aa399f06bb12ac0bd1b3d05fd3
+Source index blob: c9256eb6f96f46def12101fa1f1ca79831189928
+
+INSTALL
+Replace only root index.html with the included index.html. Keep other repository files unchanged. Previews and this audit are documentation; they do not need to be published.
+
+FINDINGS AND REPAIRS
+1. JenniferPearl2028.com returned 502 Bad Gateway / connection refused in the audit browser twice. This establishes a failure in this browser, not a permanent outage. The two alternate-domain buttons now navigate to Public Resources and Campaign Pathways. Existing campaign links still open the working dedicated campaign site at https://jenniferpearl2028.github.io/.
+2. Mobile navigation used a fixed top offset even when the top notice had scrolled away. The menu now aligns to the actual header bottom.
+3. Hidden mobile navigation now uses the hidden attribute, so its links are unavailable to keyboard navigation while closed.
+4. Opening the menu focuses its first link. Tab and Shift+Tab remain inside the open navigation. Escape restores focus to the toggle. Clicking an internal mobile link closes the menu and focuses the destination section. Menu height is bounded with internal scrolling for short screens.
+
+LIVE DESTINATION CHECKS
+Sixteen unique outgoing destinations tested by opening them in the browser. Fifteen loaded their expected page:
+- Dedicated campaign: jenniferpearl2028.github.io
+- Verve N Veda home (redirects to vervenveda.com)
+- National Policy Proposals
+- One Nation for All
+- We the People Learning Lab v2
+- Firmament Law
+- National Veterans Portal
+- Homeless Hub
+- Medicament Hub
+- Khaemenes Academy
+- River to Road
+- The Verifier: #columns target exists
+- PLERA Search
+- ProResource Hub
+- 333 Network
+Alternate custom campaign domain failed as described above. All Verve N Veda resource redirects loaded successfully. Existing resource links were retained.
+
+LOCAL BROWSER VALIDATION
+PASS built-in structural audit: no duplicate IDs, blank links, or missing fragment targets.
+PASS five viewport widths: 1440, 1024, 768, 390, 320; no horizontal document overflow.
+PASS mobile toggle state, menu visibility, link selection, Escape, focus wrapping, alignment after scroll, and close after resizing to desktop.
+PASS runtime: no page JavaScript errors.
+PASS visual inspection of mobile preview.
+
+REPOSITORY NOTES
+This repository intentionally contains a connecting gateway, not the full campaign application. There are no active forms, contribution processing, games, account services, uploads, or gallery on this page. Features inside linked sites are outside this audit's scope.
+The five .webp gallery files contain short text placeholders rather than real image bytes. They are unused by the gateway. The gallery JSON and validator are empty, and the empty workflow files sit under .github/   workflows (with spaces), which GitHub Actions does not treat as .github/workflows. These inactive remnants were preserved; no deployment configuration or gallery was activated.
+
+PUBLICATION STATUS
+GitHub update returned HTTP 403: Resource not accessible by integration. No remote commit or live page change occurred. Upload the replacement index.html to apply the repairs.
