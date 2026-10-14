@@ -1,0 +1,16 @@
+{
+  "package": "JenniferPearl2028 Gateway Quality Upgrade Overlay",
+  "created": "2026-10-14",
+  "mode": "additive_non_destructive",
+  "does_not_replace": [
+    "index.html"
+  ],
+  "files": [
+    "BASELINE-AUDIT.md",
+    "README-UPGRADE.md",
+    "docs/INSTALL-UPGRADE.md",
+    "docs/UPGRADE-ROADMAP.md",
+    "tools/check_site.py",
+    ".github/workflows/site-quality.yml"
+  ]
+}
